@@ -9,7 +9,7 @@ main {
     flex: 1
 }
   nav {
-    background-color: rgb(7, 238, 150);
+    background-color: rgb(8, 15, 114);
     padding: 10px;
   }
   
@@ -37,7 +37,7 @@ main {
   }
   
   footer {
-    background-color: steelblue;
+    background-color: rgb(8, 15, 114);
     color: white;
   }
   .slideshow-container {
