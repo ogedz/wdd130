@@ -99,7 +99,7 @@ p.colored {
 }
 nav {
   background-color: var(--nav-background-color);
-  line-height: 3em;
+  line-height: 1em;
   text-align: center;
   font-size: 1.2em;
   padding: 10px;
@@ -120,6 +120,11 @@ nav a:link, nav a:visited {
 nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
+}
+footer {
+  background-color: steelblue;
+  color: white;
+  font-size: 0.8em;
 }
 .sitemap {
   display: grid;
