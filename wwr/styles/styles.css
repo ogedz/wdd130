@@ -98,6 +98,7 @@ nav a {
 
 main section img {
     box-sizing: border-box;
+    border: 2px steelblue;  /* adding border */
 }
 
 nav a:hover {
@@ -153,7 +154,7 @@ nav a:hover {
 .button-box .book {
     background-color: #FF5733;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 5px;  /* ensuring border-radius is here */
     color: white;
 }
 
