@@ -143,9 +143,8 @@ nav a:hover {
 #hero-msg {
     color: rgb(164, 221, 153);
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
 
 .button-box {
     margin-top: 15px;
@@ -180,7 +179,9 @@ footer {
     background-color: #0a3d17;
     color: white;
     padding: 20px 5%;
-    text-align: center;
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: small;
 }
 
 footer a {
@@ -198,4 +199,5 @@ footer p {
 .social img {
     width: 30px;
     margin: 0 10px;
+    text-align: left;
 }
