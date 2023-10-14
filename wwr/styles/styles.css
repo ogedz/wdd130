@@ -1,8 +1,25 @@
+.home-title {
+    font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+    font-size: 2.5em;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
 body {
-    font-family: Arial, sans-serif;
+    background-color: #fcfbfb;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 22px;
     margin: 0;
     padding: 0;
-    background-color: #13b3b3; 
+}
+
+h2 {
+    margin: 0;
 }
 
 a {
@@ -34,7 +51,8 @@ header, .rivers-card, .camping-card, .rapids-card, .home-title, .button-box .boo
 .logo, .icon {
     width: 80px;
     display: block;
-    margin: 10px auto;
+    margin: 10px 0;
+    float: left;
 }
 
 #hero-img {
@@ -44,25 +62,42 @@ header, .rivers-card, .camping-card, .rapids-card, .home-title, .button-box .boo
     margin: 0 auto;
 }
 
-.home-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px 5%;
-}
-
 .card-img {
     width: 100%;
     max-width: 250px;
     height: 250px;
     object-fit: cover;
     margin: 10px auto;
-    text-align: center;  
+    text-align: center;
+    border: 10px solid #d9c2a3;  
+}
+
+nav {
+    clear: both;  
+    text-align: left; 
 }
 
 nav a {
-    margin: 0 15px;
+    text-decoration: none;
     color: #fcfbfb;
+    padding: 35px;
+    margin: 5px;
+    display: inline-block;  
+}
+
+
+.book, .join {
+    background-color: #d9c2a3;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+main section img {
+    box-sizing: border-box;
 }
 
 nav a:hover {
@@ -90,9 +125,10 @@ nav a:hover {
     text-align: center;
     position: relative;
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
     margin-bottom: -40px;
+    background-color: #6f7364;
+    line-height: 1.5em;
 }
 
 #hero {
@@ -104,17 +140,11 @@ nav a:hover {
 }
 
 #hero-msg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(164, 221, 153);
     text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
 }
 
-.home-title {
-    font-size: 2.5em;
-}
 
 .button-box {
     margin-top: 15px;
