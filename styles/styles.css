@@ -1,25 +1,14 @@
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-  display: flex;
-  flex-direction: column;  /* Set flex direction to column */
-  min-height: 100vh;  /* Full height of the viewport */
-}
-
 body {
-  background-color: #2578e4;
-  color: #e4d7d7;
-}
-
-main {
-  flex: 1}
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    margin: 0;
+  }
   
   nav {
-    background-color: rgb(8, 15, 114);
+    background-color: steelblue;
     padding: 10px;
-    font-size: 0.8em;
   }
   
   a {
@@ -42,14 +31,9 @@ main {
   }
   
   p {
-    padding: 5px;
+    padding: 10px;
   }
   
-  footer {
-    background-color: rgb(8, 15, 114);
-    color: white;
-    font-size: 0.8em;
-  }
   .slideshow-container {
     height: 400px; /* Replace this with the actual height of your images */
     overflow: hidden;
@@ -63,7 +47,7 @@ main {
     width: 70%;
     height: 150%;
     display: flex;
-    align-items: center;  /* To vertically center the image if it's smaller than the container */
+    align-items: center; /* To vertically center the image if it's smaller than the container */
     justify-content: center; /* To horizontally center the image */
   }
   
@@ -72,4 +56,10 @@ main {
     max-width: 100%;
   }
   
+  footer {
+    background-color: steelblue;
+    color: white;
+    margin-top: auto; /* Push the footer to the bottom */
+    padding: 10px;
+  }
   

@@ -1,46 +1,59 @@
 body {
-  text-align: center;
-  display: flex;
-  flex-direction: column;  /* Set flex direction to column */
-  min-height: 100vh;  /* Full height of the viewport */
-}
-
-main {
-  flex: 1
-}
-nav {
-  background-color: rgb(9, 105, 14);
-  padding: 10px;
-  font-size: 0.8em;
-}
-
-a {
-  color: white;
-  margin: 40px;
-  text-decoration: none; /* Remove underlines */
-}
-
-a.active {
-  color: green;
-}
-
-h1 {
-  color: steelblue;
-}
-
-img {
-  width: 25%;
-  border: 4px solid steelblue;
-  display: block;
-  margin: 0 auto;
-}
-
-p {
-  padding: 10px;
-}
-footer {
-  background-color: rgb(9, 105, 14);
-  color: white;
-  font-size: 0.8em;
-}
-
+    text-align: center;
+  }
+  
+  nav {
+    background-color: steelblue;
+    padding: 10px;
+  }
+  
+  a {
+    color: white;
+    margin: 40px;
+    text-decoration: none; /* Remove underlines */
+  }
+  
+  a.active {
+    color: green;
+  }
+  
+  h1 {
+    color: steelblue;
+  }
+  
+  img {
+    width: 70%;
+    border: 4px solid steelblue;
+  }
+  
+  p {
+    padding: 10px;
+  }
+  
+  footer {
+    background-color: steelblue;
+    color: white;
+  }
+  .slideshow-container {
+    height: 400px; /* Replace this with the actual height of your images */
+    overflow: hidden;
+    position: relative; /* For absolute positioning of images inside */
+  }
+  
+  .mySlides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 150%;
+    display: flex;
+    align-items: center;  /* To vertically center the image if it's smaller than the container */
+    justify-content: center; /* To horizontally center the image */
+  }
+  
+  .mySlides img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  
