@@ -1,0 +1,252 @@
+
+header {
+    background-color: transparent;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1px auto;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(40, 40, 145);
+    padding: 10px;
+    text-align: center;
+    justify-content: space-around;
+    z-index: -1;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: -2;
+}
+
+nav a {
+    text-align: center;
+    color: goldenrod;
+    text-decoration: none;
+    padding: 35px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.icon {
+    width: 60px;
+    padding-top: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgba(92, 171, 185, 0.569);
+}
+
+
+.containers {
+    display: flex;
+    justify-content: space-between;
+    min-height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    flex: 1;
+    min-height: 700px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #888888;
+    margin-right: 10px; /* Add margin for spacing */
+}
+
+.container:last-child {
+    margin-right: 0; /* Remove right margin for the last container */
+}
+
+.container.container-1 {
+    background-color: #33f1ff;
+    color: gold;
+}
+
+.container.container-2 {
+    background-color: rgba(47, 74, 109, 0.631);
+    color: gold;
+}
+
+.container.container-3 {
+    background-color: #33A1DE;
+    color: gold;
+}
+
+.container.container-4 {
+    background-color: #8759d2;
+    color: gold;
+}
+
+
+h1 {
+    text-align: center;
+    color: #0808079f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #396E94;
+}
+
+.container-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+.container-link:hover {
+    background-color: #396E94;
+}
+
+.container-img {
+    width: 100%;
+}
+
+.book, .join {
+    background-color: #396E94;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.book:hover, .join:hover {
+    background-color: white;
+    color: #396E94;
+}
+
+.msg {
+    background-color: #396E94;
+    line-height: 1.5em;
+    padding: 35px;
+    grid-column: 6/10;
+    grid-row: 6/7;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+footer {
+    background-color: rgb(40, 40, 145);
+    color: #7eb625;
+    font-size: 1.2em;
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .social img {
+    padding-top: 15px;
+}
+
+footer a {
+    color: goldenrod;
+}
+
+.social {
+    background-color: #393f94;
+}
+
+.icon {
+    width: 60px;
+    padding-top: 10px;
+}
+
+.home-title {
+    color: #3aa51a;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Tahoma, Verdana;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+
+.card-img {
+    border: 10px solid #396E94;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+
+
+main section img {
+    box-sizing: border-box;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    #hero, .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    #hero {
+        margin-top: 0;
+    }
+    #hero-msg {
+        margin-top: 0;
+    }
+    #hero-msg h4 {
+        display: none;
+    }
+    .home-title {
+        font-size: 25px;
+        color: #6f7364;
+    }
+    .rivers-card, .camping-card, .rapids-card {
+        margin: 50px auto;
+        width: 60%;
+    }
+    #background {
+        display: none;
+    }
+    .mountains, .msg {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    footer {
+        margin-top: 25px;
+    }
+}

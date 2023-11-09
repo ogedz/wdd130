@@ -1,0 +1,155 @@
+header {
+    background-color: transparent;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1px auto;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(40, 40, 145);
+    padding: 25px;
+    text-align: center;
+    justify-content: space-around;
+    z-index: -1;
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    z-index: -2;
+    
+}
+
+nav a {
+    text-align: center;
+    color: goldenrod;
+    text-decoration: none;
+    padding: 35px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.icon {
+    width: 60px;
+    padding-top: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: absolute;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgba(92, 171, 185, 0.569);
+}
+
+#Idaho {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: -100px;
+}
+
+#Idaho-box {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    z-index: -1;
+}
+
+#Idaho-img {
+    width: 100%;
+}
+
+#Idaho-msg { 
+    text-align: center; 
+}
+
+#Idaho-msg h4 {
+    color: rgba(114, 13, 13, 0.541);
+    font-size: 1.8em;
+}
+
+#Idaho-msg p {
+    text-align: center;
+}
+
+
+.home-title {
+    color: #0c0c1b81;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Tahoma, Verdana;
+    font-size: 2em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+
+.button-box {
+    text-align: center;
+}
+
+main section {
+    text-align: center;
+}
+
+
+footer {
+    background-color: rgb(40, 40, 145);
+    color: #7eb625;
+    font-size: 1.2em;
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .social img {
+    padding-top: 15px;
+}
+
+footer a {
+    color: goldenrod;
+}
+
+.social {
+    background-color: #393f94;
+}
+
+.icon {
+    width: 60px;
+    padding-top: 10px;
+}
+
+.slideshow-container {
+    height: 400px; /* Replace this with the actual height of your images */
+    overflow: hidden;
+    position: relative;
+}
+
+.mySlides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust the width to fill the container */
+    height: 100%;
+    display: none; /* Hide all slides by default */
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio while covering the entire container */
+}
+  
