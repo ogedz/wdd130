@@ -7,15 +7,23 @@ header {
 }
 
 nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: rgb(40, 40, 145);
-    padding: 10px;
+    padding: 25px;
+}
+
+nav a {
     text-align: center;
-    justify-content: space-around;
-    z-index: -1;
+    color: goldenrod;
+    text-decoration: none;
+    padding: 0 15px; /* Adjust padding for better spacing */
+}
+
+nav a:hover {
+    background-color: white;
+    color: #396E94;
 }
 
 .banner {
@@ -23,13 +31,6 @@ nav {
     height: auto;
     position: relative;
     z-index: -2;
-}
-
-nav a {
-    text-align: center;
-    color: goldenrod;
-    text-decoration: none;
-    padding: 35px;
 }
 
 .logo {
