@@ -1,77 +1,138 @@
-header {
-    background-color: transparent;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1px auto;
-}
-
-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgb(40, 40, 145);
-    padding: 25px;
-    text-align: center;
-    justify-content: space-around;
-    z-index: -1;
-}
-
-.banner {
-    width: 100%;
-    height: auto;
-    position: relative;
-    z-index: -2;
-    
-}
-
-nav a {
-    text-align: center;
-    color: goldenrod;
-    text-decoration: none;
-    padding: 35px;
-}
-
-.logo {
-    width: 80px;
-}
-
-.icon {
-    width: 60px;
-    padding-top: 10px;
-}
-
-body {
-    font-family: Arial, sans-serif;
+/* Reset some default styles */
+body, h1, h2, p {
     margin: 0;
     padding: 0;
-    display: absolute;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: rgba(92, 171, 185, 0.569);
-}
-
-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-    margin: 10px;
-}
-
-.section-img {
-    max-width: 100%;
-    height: auto;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 0%, 97%); /* Add background color as needed */
+    color: #333333; /* Set default text color */
+    padding: 10px; /* Add padding to the body */
+    box-sizing: border-box; /* Include padding in the width */
+  }
+  
+  /* Header styles */
+  header {
+    position: relative;
+    background-color: rgb(219, 219, 236); /* Header background color */
+    color: #fff; /* Header text color */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #logo_link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #logo_link img {
+    width: 50px; /* Adjust logo width as needed */
+    margin-right: 10px; /* Add margin for separation between logo and text */
+  }
+  
+  nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    display: flex; /* Ensure the navigation links are displayed correctly */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: gold;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color:  rgb(40, 40, 145);
+    display: inline-block; /* Ensure the links are displayed correctly */
+  }
+  
+  nav a:hover {
+    background-color: greenyellow;
+  }
+  
+  .banner {
+    width: 100%;
+    display: block;
+  }
+  
+  
+  h1 {
+    text-align: center;
     margin-bottom: 20px;
-}
-
-section > div {
+  }
+  
+  /* Container styles */
+  .containers {
+    display: flex;
+        justify-content: space-between;
+        min-height: 50px;
+        font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .container {
     flex: 1;
-    margin-left: 20px;
+    min-height: 700px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #888888;
+    margin-right: 10px; /* Add margin for spacing */
+  }
+  
+  .container h2 {
+    text-align: center;
+  }
+  
+  .container-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #0c0b0b;
+    padding: 20px;
+    transition: background-color 0.3s;
+  }
+
+  .container:last-child {
+    margin-right: 0; /* Remove right margin for the last container */
+}
+  
+  .container-img {
+    width: 100%;  
+  }
+
+  .container.container-1 {
+    background-color: gray;
+    color: gold;
 }
 
-footer {
+.container.container-2 {
+    background-color: blueviolet;
+    color: gold;
+}
+ 
+.container.container-3 {
+    background-color: chartreuse;
+    color: gold;
+}
+
+.container.container-4 {
+    background-color: turquoise;
+    color: gold;
+}
+  /* Footer styles */
+  footer {
     background-color: rgb(40, 40, 145);
     color: gold;
     text-align: center;
@@ -82,116 +143,26 @@ footer {
     bottom: 0;
     width: 100%;
     align-items: center;
-}
-
-.social img {
+  }
+  
+  .footer p {
+    margin-bottom: 5px;
+  }
+  
+  /* Social icons styles */
+  .social img {
     width: 30px;
     height: 30px;
     margin: 0 5px;
-}
-
-.button-box {
-    margin-top: 20px;
-}
-
-.book {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.book:hover {
-    background-color: #555;
-}
-
-.containers {
-    display: flex;
-    justify-content: space-between;
-    min-height: 50px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.container {
-    flex: 1;
-    min-height: 700px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px #888888;
-    margin-right: 10px; /* Add margin for spacing */
-}
-
-.container:last-child {
-    margin-right: 0; /* Remove right margin for the last container */
-}
-
-.container.container-1 {
-    background-color: #33f1ff;
-    color: gold;
-}
-
-.container.container-2 {
-    background-color: rgba(47, 74, 109, 0.631);
-    color: gold;
-}
-
-.container.container-3 {
-    background-color: #33A1DE;
-    color: gold;
-}
-
-.container.container-4 {
-    background-color: #8759d2;
-    color: gold;
-}
-
-.container-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    padding: 20px;
-    transition: background-color 0.3s;
-}
-
-.container-link:hover {
-    background-color: #396E94;
-}
-
-.container-img {
-    width: 100%;
-}
-
-h1 {
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-@media (min-width: 601px) {
+  }
+  
+  /* Responsive styles */
+  @media (min-width: 601px) {
     nav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        padding: 25px; /* Restored padding for larger screens */
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
     }
-
-    nav a {
-        padding: 35px; /* Restored padding for larger screens */
-    }
-
-    section > div {
-        margin: 0 20px; /* Restored margin for larger screens */
-    }
-
-    footer {
-        flex-direction: row; /* Restored flex direction for larger screens */
-    }
-}
+  }
+  
