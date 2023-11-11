@@ -1,3 +1,4 @@
+
 header {
     background-color: transparent;
     position: relative;
@@ -50,106 +51,79 @@ body {
     min-height: 100vh;
     background-color: rgba(92, 171, 185, 0.569);
 }
-
-#Idaho {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    margin-top: -100px;
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 10px;
 }
 
-#Idaho-box {
-    grid-column: 1/4;
-    grid-row: 1/3;
-    z-index: -1;
+.section-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-#Idaho-img {
-    width: 100%;
+section > div {
+    flex: 1;
+    margin: 10px 0; /* Adjusted margin for mobile */
 }
-
-#Idaho-msg { 
-    text-align: center; 
-}
-
-#Idaho-msg h4 {
-    color: rgba(114, 13, 13, 0.541);
-    font-size: 1.8em;
-}
-
-#Idaho-msg p {
-    text-align: center;
-}
-
-
-.home-title {
-    color: #0c0c1b81;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Tahoma, Verdana;
-    font-size: 2em;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.home-grid {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-}
-
-
-.button-box {
-    text-align: center;
-}
-
-main section {
-    text-align: center;
-}
-
 
 footer {
     background-color: rgb(40, 40, 145);
-    color: #7eb625;
-    font-size: 1.2em;
-    padding: 25px 50px;
-    margin-top: 200px;
+    color: gold;
+    text-align: center;
+    padding: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column; /* Adjusted flex direction for mobile */
 }
 
-footer .social img {
-    padding-top: 15px;
+.social img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
 }
 
-footer a {
-    color: goldenrod;
+.button-box {
+    margin-top: 20px;
 }
 
-.social {
-    background-color: #393f94;
+.book {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.icon {
-    width: 60px;
-    padding-top: 10px;
+.book:hover {
+    background-color: #555;
 }
 
-.slideshow-container {
-    height: 400px; /* Replace this with the actual height of your images */
-    overflow: hidden;
-    position: relative;
-}
+@media (min-width: 601px) {
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        padding: 25px; /* Restored padding for larger screens */
+    }
 
-.mySlides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Adjust the width to fill the container */
-    height: 100%;
-    display: none; /* Hide all slides by default */
-}
+    nav a {
+        padding: 35px; /* Restored padding for larger screens */
+    }
 
-.mySlides img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Maintain aspect ratio while covering the entire container */
+    section > div {
+        margin: 0 20px; /* Restored margin for larger screens */
+    }
+
+    footer {
+        flex-direction: row; /* Restored flex direction for larger screens */
+    }
 }
-  
