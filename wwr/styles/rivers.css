@@ -112,16 +112,39 @@ body, h1, h2, p {
     margin: 0 5px;
   }
   
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    nav {
-      top: 50px;
-      right: 10px;
+  /* Responsive styles for mobile phones and small screens */
+@media screen and (max-width: 767px) {
+    body {
+      font-size: 14px; /* Adjust font size for smaller screens */
     }
-  
+
+    header {
+      padding: 5px; /* Adjust header padding */
+    }
+
     #logo_link {
-      top: 50px;
-      left: 10px;
+      font-size: 18px; /* Adjust logo link font size */
+    }
+
+    nav {
+      top: 5px; /* Adjust navigation position */
+      right: 5px;
+    }
+
+    nav a {
+      font-size: 12px; /* Adjust navigation link font size */
+      padding: 3px 8px; /* Adjust navigation link padding */
+    }
+
+    .banner {
+      width: 100%; /* Make the banner take the full width of the screen */
+      max-width: 100%; /* Ensure the banner doesn't exceed the screen width */
+      height: auto; /* Maintain the aspect ratio */
+    }
+
+    h1 {
+      font-size: 18px; /* Adjust heading font size */
+      margin-bottom: 10px;
     }
   
     .section {
@@ -132,5 +155,15 @@ body, h1, h2, p {
       width: 100%;
       margin-bottom: 10px;
     }
-  }
+
+    footer {
+      margin-top: 25px;
+    }
+
+    .social img {
+      width: 20px; /* Adjust social icon size */
+      height: 20px;
+      margin: 0 3px; /* Adjust margin between social icons */
+    }
+}
   
