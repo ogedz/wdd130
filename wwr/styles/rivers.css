@@ -126,14 +126,12 @@ body, h1, h2, p {
       font-size: 18px; /* Adjust logo link font size */
     }
 
-    nav {
-      top: 5px; /* Adjust navigation position */
-      right: 5px;
+    nav, footer {
+      flex-direction: column;
     }
-
     nav a {
-      font-size: 12px; /* Adjust navigation link font size */
-      padding: 3px 8px; /* Adjust navigation link padding */
+      display: block;
+      padding: 15px;
     }
 
     .banner {

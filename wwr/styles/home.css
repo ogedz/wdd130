@@ -165,56 +165,44 @@ body, h1, h2, p {
     header {
       padding: 5px; /* Adjust header padding */
     }
-
     #logo_link {
       font-size: 18px; /* Adjust logo link font size */
     }
-
-    nav {
-      top: 5px; /* Adjust navigation position */
-      right: 5px;
+    nav, footer {
+      flex-direction: column;
     }
-
     nav a {
-      font-size: 12px; /* Adjust navigation link font size */
-      padding: 3px 8px; /* Adjust navigation link padding */
+      display: block;
+      padding: 15px;
     }
-
     .banner {
       width: 100%; /* Make the banner take the full width of the screen */
       max-width: 100%; /* Ensure the banner doesn't exceed the screen width */
       height: auto; /* Maintain the aspect ratio */
     }
-
     h1 {
       font-size: 18px; /* Adjust heading font size */
       margin-bottom: 10px;
     }
-
     .containers {
       flex-direction: column; /* Adjust container layout for smaller screens */
       align-items: center;
     }
-
     .container {
       flex: 1;
       min-height: auto; /* Adjust minimum height for containers */
       margin-right: 0;
       margin-bottom: 10px; /* Add margin between containers */
     }
-
     .container h2 {
       font-size: 16px; /* Adjust heading font size inside containers */
     }
-
     .container-link {
       padding: 15px; /* Adjust container link padding */
     }
-
     footer {
     margin-top: 25px;
     }
-
     .social img {
       width: 20px; /* Adjust social icon size */
       height: 20px;
