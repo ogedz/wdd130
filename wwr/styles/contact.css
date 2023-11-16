@@ -1,13 +1,25 @@
-@import url('href="https://fonts.googleapis.com/css?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
 
 body {
   background-color: whitesmoke;
-  font-family: "Tangerine", sans-serif;
+  font-family: sans-serif;
   font-size: 22px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+#content {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto; /* This will push the footer to the bottom */
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -35,11 +47,6 @@ nav a:hover {
   width: 80px;
 }
 
-.icon {
-  width: 60px;
-  padding-top: 10px;
-}
-
 #logo_link {
   padding-top: 5px;
   justify-self: center;
@@ -47,10 +54,8 @@ nav a:hover {
 }
 
 form {
-  /* Center the form on the page */
   margin: 0 auto;
   width: 400px;
-  /* Form outline */
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
@@ -67,7 +72,6 @@ form li + li {
 }
 
 label {
-  /* Uniform size & alignment */
   display: inline-block;
   width: 90px;
   text-align: right;
@@ -75,45 +79,46 @@ label {
 
 input,
 textarea {
-  /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
-  font: 1em sans-serif;
-
-  /* Uniform text field size */
+  font: 1.5em sans-serif;
   width: 300px;
   box-sizing: border-box;
-
-  /* Match form field borders */
   border: 1px solid #999;
 }
 
 input:focus,
 textarea:focus {
-  /* Additional highlight for focused elements */
   border-color: #000;
 }
 
 textarea {
-  /* Align multiline text fields with their labels */
   vertical-align: top;
-
-  /* Provide space to type some text */
   height: 5em;
 }
 
 .button {
-  /* Align buttons with the text fields */
-  padding-left: 90px; /* same size as the label elements */
+  padding-left: 90px;
 }
 
 button {
-  /* This extra margin represents roughly the same space
-     as the space between the labels and their text fields */
   margin-left: 0.5em;
 }
 
 .container {
   background-color: #396E94;
+}
+
+#feedback {
+  background-color: antiquewhite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5em;
+  display: none;
+}
+
+.moveDown {
+  margin-top: 3em;
 }
 
 footer {
@@ -122,22 +127,16 @@ footer {
   text-align: center;
   padding: 10px;
   display: flex;
-  position: flex;
   justify-content: space-around;
-  bottom: 0;
   width: 100%;
   align-items: center;
 }
 
-.footer p {
-  margin-bottom: 5px;
-}
 
 h1 {
   text-align: center;
 }
 
-/* Social icons styles */
 .social img {
   width: 30px;
   height: 30px;
