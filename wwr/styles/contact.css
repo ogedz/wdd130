@@ -142,3 +142,43 @@ h1 {
   height: 30px;
   margin: 0 5px;
 }
+
+ /* Responsive styles for mobile phones and small screens */
+ @media screen and (max-width: 767px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  header {
+    padding: 5px; /* Adjust header padding */
+  }
+  #logo_link {
+    font-size: 18px; /* Adjust logo link font size */
+  }
+  nav, footer {
+    flex-direction: column;
+  }
+  nav a {
+    display: block;
+    padding: 15px;
+  }
+
+  .containers {
+    flex-direction: column; /* Adjust container layout for smaller screens */
+    align-items: center;
+  }
+  .container {
+    flex: 1;
+    min-height: auto; /* Adjust minimum height for containers */
+    margin-right: 0;
+    margin-bottom: 10px; /* Add margin between containers */
+  }
+  footer {
+    margin-top: 25px;
+    }
+    .social img {
+      width: 20px; /* Adjust social icon size */
+      height: 20px;
+      margin: 0 3px; /* Adjust margin between social icons */
+    }
+}
