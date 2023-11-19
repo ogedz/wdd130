@@ -170,7 +170,7 @@ body, h1, h2, p {
       font-size: 18px; /* Adjust heading font size */
       margin-bottom: 10px;
     }
-    .containers {
+    .card-mt4, .card-mt5, .card-mt4-1 {
       flex-direction: column; /* Adjust container layout for smaller screens */
       align-items: center;
     }
@@ -183,7 +183,7 @@ body, h1, h2, p {
     .container h2 {
       font-size: 16px; /* Adjust heading font size inside containers */
     }
-    .container-link {
+    .card-link {
       padding: 15px; /* Adjust container link padding */
     }
     footer {
