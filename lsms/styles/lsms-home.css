@@ -1,0 +1,197 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #00b4d8; /* Add background color as needed */
+    color: #333333; /* Set default text color */
+    padding: 10px; /* Add padding to the body */
+    box-sizing: border-box; /* Include padding in the width */
+  }
+  
+  /* Header styles */
+  header {
+    position: relative;
+    background-color: rgb(219, 219, 236); /* Header background color */
+    color: #fff; /* Header text color */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #logo_link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #logo_link img {
+    width: 50px; /* Adjust logo width as needed */
+    margin-right: 10px; /* Add margin for separation between logo and text */
+  }
+  
+  nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    display: flex; /* Ensure the navigation links are displayed correctly */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: gold;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #1026f1;
+    display: inline-block; /* Ensure the links are displayed correctly */
+  }
+  
+  nav a:hover {
+    background-color: greenyellow;
+  }
+  
+  .banner {
+    width: 100%;
+    display: block;
+  }
+  
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+/* Card with Margin Top 4 */
+.card-mt4 {
+    margin-top: 4rem;
+}
+
+/* Card with Margin Top 5 */
+.card-mt5 {
+    margin-top: 5rem;
+}
+
+/* Card styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card with Image */
+.card-mt4 .card-img-top,
+.card-mt5 .card-img-top {
+    width: 50%; /* Adjust the width of the image column */
+    height: auto; /* Maintain the aspect ratio */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Card Body styles */
+.card .card-body {
+    padding: 20px;
+}
+
+/* Card Colors */
+.card-mt4 {
+    background-color: blueviolet; /* Yellow color for card-mt4 */
+    color: #212529; /* Adjust text color as needed */
+}
+
+.card-mt4-1 {
+    background-color: crimson; /* Yellow color for card-mt4 */
+    color: #212529; /* Adjust text color as needed */
+}
+
+.card-mt5 {
+    background-color: olivedrab; /* Green color for card-mt5 */
+    color: #ffffff; /* Adjust text color as needed */
+}
+
+
+  /* Footer styles */
+  footer {
+    background-color: #1026f1;
+    color: gold;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    position: flex;
+    justify-content: space-around;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .footer p {
+    margin-bottom: 5px;
+  }
+  
+  /* Social icons styles */
+  .social img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+  
+  /* Responsive styles for mobile phones and small screens */
+@media screen and (max-width: 767px) {
+    body {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    header {
+      padding: 5px; /* Adjust header padding */
+    }
+    #logo_link {
+      font-size: 18px; /* Adjust logo link font size */
+    }
+    nav, footer {
+      flex-direction: column;
+    }
+    nav a {
+      display: block;
+      padding: 15px;
+    }
+    .banner {
+      width: 100%; /* Make the banner take the full width of the screen */
+      max-width: 100%; /* Ensure the banner doesn't exceed the screen width */
+      height: auto; /* Maintain the aspect ratio */
+    }
+    h1 {
+      font-size: 18px; /* Adjust heading font size */
+      margin-bottom: 10px;
+    }
+    .containers {
+      flex-direction: column; /* Adjust container layout for smaller screens */
+      align-items: center;
+    }
+    .container {
+      flex: 1;
+      min-height: auto; /* Adjust minimum height for containers */
+      margin-right: 0;
+      margin-bottom: 10px; /* Add margin between containers */
+    }
+    .container h2 {
+      font-size: 16px; /* Adjust heading font size inside containers */
+    }
+    .container-link {
+      padding: 15px; /* Adjust container link padding */
+    }
+    footer {
+    margin-top: 25px;
+    }
+    .social img {
+      width: 20px; /* Adjust social icon size */
+      height: 20px;
+      margin: 0 3px; /* Adjust margin between social icons */
+    }
+}
