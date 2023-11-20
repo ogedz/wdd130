@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifox School Management System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/lsms-home.css">
+</head>
+
+<body>
+    <div id="content">
+        <header class="clearfix">
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/logo.png" alt="lsms logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="admin.html">Admin</a>
+                <a href="teacher.html">Teacher</a>
+                <a href="student.html">Student</a>
+                <a href="parent.html">Parent</a>
+                <a href="cbt.html">CBT</a>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+        </header>
+        <div class="card mt-6">
+            <div class="card-body">
+                <h2>School Registration</h2>
+                <form action="school_signup_process.php" method="post">
+                    <!-- Replace "school_signup_process.php" with the actual processing script -->
+        
+                    <!-- School Name Input -->
+                    <div class="form-group">
+                        <label for="school_name">School Name:</label>
+                        <input type="text" id="school_name" name="school_name" class="form-control" required>
+                    </div>
+        
+                    <!-- School Address Input -->
+                    <div class="form-group">
+                        <label for="school_address">School Address:</label>
+                        <textarea id="school_address" name="school_address" class="form-control" required></textarea>
+                    </div>
+        
+                    <!-- Contact Person Input -->
+                    <div class="form-group">
+                        <label for="contact_person">Contact Person:</label>
+                        <input type="text" id="contact_person" name="contact_person" class="form-control" required>
+                    </div>
+        
+                    <!-- Contact Email Input -->
+                    <div class="form-group">
+                        <label for="contact_email">Contact Email:</label>
+                        <input type="email" id="contact_email" name="contact_email" class="form-control" required>
+                    </div>
+        
+                    <!-- Contact Phone Input -->
+                    <div class="form-group">
+                        <label for="contact_phone">Contact Phone:</label>
+                        <input type="tel" id="contact_phone" name="contact_phone" class="form-control" required>
+                    </div>
+        
+                    <!-- School Category Multi-Select Box -->
+                    <div class="form-group">
+                        <label>School Category:</label>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="creche" name="school_categories[]" value="creche">
+                            <label class="form-check-label" for="creche">Creche</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="nursery" name="school_categories[]" value="nursery">
+                            <label class="form-check-label" for="nursery">Nursery School</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="primary" name="school_categories[]" value="primary">
+                            <label class="form-check-label" for="primary">Primary School</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="junior_secondary" name="school_categories[]" value="junior_secondary">
+                            <label class="form-check-label" for="junior_secondary">Junior Secondary School</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="senior_secondary" name="school_categories[]" value="senior_secondary">
+                            <label class="form-check-label" for="senior_secondary">Senior Secondary School</label>
+                        </div>
+                    </div>
+        
+                    <!-- Username Input -->
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" class="form-control" required>
+                    </div>
+        
+                    <!-- Password Input -->
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+        
+                    <!-- Confirm Password Input -->
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password:</label>
+                        <input type="password" id="confirm_password" name="confirm_password" class="form-control" required>
+                    </div>
+        
+                    <!-- Terms and Conditions Checkbox -->
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="terms_conditions" required>
+                        <label class="form-check-label" for="terms_conditions">I agree to the Terms and Conditions</label>
+                    </div>
+        
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </div>
+        <footer class="mt-5">
+            <p>© 2023 Lifox School Management System  | Ogedengbe  | All rights reserved.</p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank"> 
+                    <img src="images/fb.jpg" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+<!-- JS scripts for Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // get the feedback div element so we can do something with it.
+   const feedbackElement = document.getElementById('feedback');
+   // get the form so we can read what was entered in it.
+   const formElement = document.forms[0];
+   // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+   formElement.addEventListener('submit', function(e) {
+   // stop the form from doing the default action.
+   e.preventDefault();
+   // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+   feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+   // make the feedback element visible.
+   feedbackElement.style.display = "block";
+   // add a class to move everything down so our message doesn't cover it.
+   document.body.classList.toggle('moveDown');
+   });
+</script>
+
+</body>
+
+</html>
