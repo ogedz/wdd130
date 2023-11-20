@@ -1,163 +1,113 @@
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #00b4d8; /* Add background color as needed */
-    color: #333333; /* Set default text color */
-    padding: 10px; /* Add padding to the body */
-    box-sizing: border-box; /* Include padding in the width */
-  }
-  
-  /* Header styles */
-  header {
-    position: relative;
-    background-color: rgb(219, 219, 236); /* Header background color */
-    color: #fff; /* Header text color */
-    padding: 10px;
-    text-align: center;
-  }
-  
-  #logo_link {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 2;
-    text-decoration: none;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  #logo_link img {
-    width: 70px; /* Adjust logo width as needed */
-    margin-right: 10px; /* Add margin for separation between logo and text */
-  }
-  
-  nav {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 2;
-    display: flex; /* Ensure the navigation links are displayed correctly */
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: gold;
-    margin: 0 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #1026f1;
-    display: inline-block; /* Ensure the links are displayed correctly */
-  }
-  
-  nav a:hover {
-    background-color: greenyellow;
-  }
-  
-  .banner {
-    width: 100%;
-    display: block;
-  }
-  
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: goldenrod;
-  }
-
-  p {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-/* Card with Margin Top 4 */
-.card-mt4 {
-    margin-top: 4rem;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333333; /* Dark gray text color */
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-/* Card with Margin Top 5 */
-.card-mt5 {
-    margin-top: 5rem;
-}
-
-/* Card styles */
-.card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card h2 {
+/* Header styles */
+header {
+  position: relative;
+  background-color: #07568b; /* Blue header background */
+  color: gold;
+  padding: 10px;
   text-align: center;
-  
-}
-/* Card with Image */
-.card-mt4 .card-img-top,
-.card-mt5 .card-img-top,
-.card-mt4-1 .card-img-top, 
-.card-mt6 .card-img-top,
-.card-mt7 .card-img-top {
-    width: 70%; /* Adjust the width of the image column */
-    height: auto; /* Maintain the aspect ratio */
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
-/* Card Body styles */
-.card .card-body {
-    padding: 20px;
+.banner {
+  width: 100%;
+  display: block;
+}
+
+#logo_link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  text-decoration: none;
+  color: gold;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#logo_link img {
+  width: 70px; /* Adjust logo width as needed */
+  margin-right: 10px; /* Add margin for separation between logo and text */
+}
+
+nav a {
+  text-decoration: none;
+  color: gold; /* White text for navigation links */
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #07810c; /* Green background for navigation links */
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #0ac513; /* Darker green on hover */
+}
+
+/* Title Section Styles */
+.title-section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3498db; /* Blue heading color */
 }
 
 /* Card Colors */
 .card-mt4 {
-    background-color: green; /* Yellow color for card-mt4 */
-    color: gold; /* Adjust text color as needed */
+  background-color: #3498db; /* Blue color for card-mt4 */
+  color: gold; /* White text on blue background */
 }
 
 .card-mt4-1 {
-    background-color: crimson; /* Yellow color for card-mt4 */
-    color: gold; /* Adjust text color as needed */
+  background-color: #e74c3c; /* Red color for card-mt4-1 */
+  color: gold; /* White text on red background */
 }
 
 .card-mt5 {
-    background-color: #165baa; /* Green color for card-mt5 */
-    color: gold; /* Adjust text color as needed */
+  background-color: rgb(60, 189, 9); /* Green color for card-mt5 */
+  color: gold; /* White text on green background */
 }
 
-/* read more*/
-.card-mt7 {
-  background-color: #3238ac; 
-  color: gold;
-  margin: 10px;
-  
-}
-
-/* sigu-up*/
 .card-mt6 {
-  background-color: #091a09; /* Green color for card-mt5 */
-  color: gold; /* Adjust text color as needed */
+  background-color: #e67e22; /* Orange color for card-mt6 */
+  color: gold; /* White text on orange background */
 }
 
-  /* Footer styles */
-  footer {
-    background-color: #1026f1;
-    color: gold;
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    position: flex;
-    justify-content: space-around;
-    bottom: 0;
-    width: 100%;
-    align-items: center;
-  }
-  
+.card-mt7 {
+  background-color: #9b59b6; /* Purple color for card-mt7 */
+  color: gold; /* White text on purple background */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: goldenrod;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Footer styles */
+footer {
+  background-color: #07568b; /* Blue footer background */
+  color: gold;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  position: flex;
+  justify-content: space-around;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+}
   .footer p {
     margin-bottom: 5px;
   }

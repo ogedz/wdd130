@@ -1,0 +1,312 @@
+
+
+/* ogedengbe */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: goldenrod; /* Light gray background color */
+    color: #333333; /* Set default text color */
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Header Styles */
+header {
+    background-color: #343a40; /* Dark background color for the header */
+    color: #ffffff; /* Header text color */
+    padding: 10px;
+    text-align: center;
+}
+
+#logo_link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #logo_link img {
+    width: 70px; /* Adjust logo width as needed */
+    margin-right: 10px; /* Add margin for separation between logo and text */
+  }
+
+nav {
+    position: relative;
+    z-index: 2;
+    display: flex; /* Ensure the navigation links are displayed correctly */
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue color for navigation links */
+    display: inline-block; /* Ensure the links are displayed correctly */
+}
+
+nav a:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Admin Page Styles */
+.admin-page {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff; /* White background for the admin page */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Advertisement Section Styles */
+.advertisement img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Login Section Styles */
+.login-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-section button {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+/* Admin Login Modal Styles */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-title {
+    font-size: 24px;
+}
+
+.modal-body {
+    text-align: left;
+}
+
+/* Key Features Section Styles */
+.key-features {
+    margin-top: 30px;
+}
+
+.key-features h2 {
+    text-align: center;
+}
+
+.key-features img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.key-features h3 {
+    text-align: center;
+}
+
+.key-features p {
+    text-align: center;
+}
+
+/* Administrator Responsibilities Section Styles */
+.admin-responsibilities {
+    margin-top: 30px;
+}
+
+.admin-responsibilities h2 {
+    text-align: center;
+}
+
+.admin-responsibilities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.admin-responsibilities li {
+    margin-bottom: 10px;
+}
+
+/* Available Tools Section Styles */
+.available-tools {
+    margin-top: 30px;
+}
+
+.available-tools h2 {
+    text-align: center;
+}
+
+.available-tools img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.available-tools h3 {
+    text-align: center;
+}
+
+.available-tools p {
+    text-align: center;
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    margin-top: 30px;
+}
+
+.testimonials h2 {
+    text-align: center;
+}
+
+.testimonials blockquote {
+    text-align: center;
+}
+
+.testimonials footer {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Training and Support Section Styles */
+.training-support {
+    margin-top: 30px;
+}
+
+.training-support h2 {
+    text-align: center;
+}
+
+.training-support p {
+    text-align: center;
+}
+
+/* Security Measures Section Styles */
+.security-measures {
+    margin-top: 30px;
+}
+
+.security-measures h2 {
+    text-align: center;
+}
+
+.security-measures p {
+    text-align: center;
+}
+
+/* System Updates Section Styles */
+.system-updates {
+    margin-top: 30px;
+}
+
+.system-updates h2 {
+    text-align: center;
+}
+
+.system-updates p {
+    text-align: center;
+}
+
+/* FAQs Section Styles */
+.faqs {
+    margin-top: 30px;
+}
+
+.faqs h2 {
+    text-align: center;
+}
+
+.accordion {
+    margin-top: 20px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+ /* Footer styles */
+ footer {
+    background-color: #343a40; /* Dark background color for the footer */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    position: flex;
+    justify-content: space-around;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .footer p {
+    margin-bottom: 5px;
+  }
+  
+  /* Social icons styles */
+  .social img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+
+/* Responsive Styles for Smaller Screens */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    header {
+        padding: 5px; /* Adjust header padding */
+    }
+
+    #logo_link {
+        font-size: 18px; /* Adjust logo link font size */
+    }
+
+    nav, footer {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px;
+        margin-bottom: 5px; /* Add margin between navigation links */
+    }
+
+    .advertisement img {
+        margin-top: 15px; /* Add space between advertisement image and text */
+    }
+
+    .admin-page {
+        margin-top: 10px;
+    }
+
+    .login-section button {
+        width: 100%; /* Make the login button full-width on smaller screens */
+    }
+
+    footer {
+        margin-top: 15px;
+    }
+
+    .social img {
+        width: 20px; /* Adjust social icon size */
+        height: 20px;
+        margin: 0 3px; /* Adjust margin between social icons */
+    }
+}

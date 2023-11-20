@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifox School Management System - Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/lsms-admin.css">
+</head>
+
+<body>
+    <div id="content">
+        <header class="clearfix">
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/logo.png" alt="lsms logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="admin.html">Admin</a>
+                <a href="teacher.html">Teacher</a>
+                <a href="student.html">Student</a>
+                <a href="parent.html">Parent</a>
+                <a href="cbt.html">CBT</a>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+        </header>
+
+        <!-- Admin Page Content -->
+        <div class="admin-page">
+            <!-- Advertisement Section -->
+            <section class="advertisement">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/img_admin1.png" class="img-fluid" alt="Admin Page Advertisement Image">
+                        </div>
+                        <div class="col-md-6">
+                            <h1>Welcome to the Admin Dashboard</h1>
+                            <p>Empowering School Administrators with powerful tools for efficient management.</p>
+                            <p>Manage students, teachers, classes, and more seamlessly with Lifox School Management System.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Login Section - Modal Trigger -->
+            <div class="text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adminLoginModal">
+                    Admin Login
+                </button>
+            </div>
+
+            <!-- Admin Login Modal -->
+            <div class="modal fade" id="adminLoginModal" tabindex="-1" role="dialog" aria-labelledby="adminLoginModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="adminLoginModalLabel">Admin Login</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Admin Login Form -->
+                            <form action="admin-dashboard.html" method="post">
+                                <div class="form-group">
+                                    <label for="admin_id">School Unique ID:</label>
+                                    <input type="text" id="admin_id" name="admin_id" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="admin_id">Admin ID:</label>
+                                    <input type="text" id="admin_id" name="admin_id" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password:</label>
+                                    <input type="password" id="password" name="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                <button type="submit" class="btn btn-primary btn-block">Forget password?</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="key-features">
+            <div class="container">
+                <h2>Key Features</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="images/ar.jpg" alt="Feature Image">
+                        <h3>Student Management</h3>
+                        <p>Efficiently manage student records, attendance, and academic performance.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/my1.jpg" alt="Feature Image">
+                        <h3>Teacher Collaboration</h3>
+                        <p>Foster collaboration among teachers with tools for lesson planning and resource sharing.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/ol2.jpg" alt="Feature Image">
+                        <h3>Parent Communication</h3>
+                        <p>Enhance communication with parents through announcements, grades, and event updates.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Admin responsibilities -->
+        <section class="admin-responsibilities">
+            <div class="container">
+                <h2>Administrator Responsibilities</h2>
+                <ul>
+                    <li>Manage student and teacher profiles.</li>
+                    <li>Generate and analyze academic reports.</li>
+                    <li>Set up and monitor class schedules.</li>
+                    <li>Facilitate communication between teachers, students, and parents.</li>
+                    <li>Oversee and coordinate school events and activities.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- Available  tools-->
+        <section class="available-tools">
+            <div class="container">
+                <h2>Available Tools</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="images/me2.jpg" alt="Tool Image">
+                        <h3>Class Management</h3>
+                        <p>Effortlessly organize and manage classes and subjects.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/ch1.jpg" alt="Tool Image">
+                        <h3>Event Calendar</h3>
+                        <p>Keep track of school events, holidays, and important dates.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/ol1.jpg" alt="Tool Image">
+                        <h3>Communication Hub</h3>
+                        <p>Centralized platform for communication between stakeholders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonial -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Administrators Say</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <blockquote>
+                            "The Lifox School Management System has revolutionized how we manage our school. It's intuitive
+                            and powerful, making administrative tasks a breeze."
+                            <footer>-  Vice-Principal Olowookere</footer>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-6">
+                        <blockquote>
+                            "We've seen a significant improvement in communication and organization since implementing
+                            Lifox. It's a game-changer for school administrators."
+                            <footer>- Examiner Ogunleye</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="training-support">
+            <div class="container">
+                <h2>Training and Support</h2>
+                <p>Get started with our comprehensive training resources tailored for administrators. Whether you're a
+                    new user or looking to enhance your skills, we offer tutorials, documentation, and responsive customer
+                    support to assist you at every step.</p>
+            </div>
+        </section>
+        <section class="security-measures">
+            <div class="container">
+                <h2>Security Measures</h2>
+                <p>Rest assured that your school's data is protected with state-of-the-art security measures. Our system
+                    employs encryption, secure authentication, and regular security audits to ensure the confidentiality
+                    and integrity of your information.</p>
+            </div>
+        </section>
+        <section class="faqs">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="accordion" id="faqsAccordion">
+                    <div class="card">
+                        <div class="card-header" id="faqHeadingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                    How do I reset my password?
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="faqCollapseOne" class="collapse show" aria-labelledby="faqHeadingOne"
+                            data-parent="#faqsAccordion">
+                            <div class="card-body">
+                                To reset your password, visit the login page and click on the "Forgot Password" link.
+                                Follow the instructions to reset your password.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" id="faqsAccordion">
+                    <div class="card">
+                        <div class="card-header" id="faqHeadingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                    How can I add or remove users from the system?
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="faqCollapseOne" class="collapse show" aria-labelledby="faqHeadingOne"
+                            data-parent="#faqsAccordion">
+                            <div class="card-body">
+                                As an administrator, you can manage users through the "User Management" section in the
+                                admin dashboard. You can add new users, modify existing profiles, and deactivate accounts
+                                as needed.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="faqHeadingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                    Can I customize the system according to our school's specific needs?
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="faqCollapseTwo" class="collapse" aria-labelledby="faqHeadingTwo"
+                            data-parent="#faqsAccordion">
+                            <div class="card-body">
+                                Yes, the Lifox School Management System is designed to be flexible. You can customize
+                                features, fields, and settings to align with your school's unique requirements. Contact
+                                our support team for assistance with customization.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="faqHeadingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                    What security measures are in place to protect our school's data?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="faqCollapseThree" class="collapse" aria-labelledby="faqHeadingThree"
+                            data-parent="#faqsAccordion">
+                            <div class="card-body">
+                                We prioritize the security of your data. Our system uses industry-standard encryption
+                                protocols, secure authentication methods, and undergoes regular security audits. Rest
+                                assured, your information is handled with the utmost care.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="mt-5">
+            <p>© 2023 Lifox School Management System  | Ogedengbe  | All rights reserved.</p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/fb.jpg" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JS scripts for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
