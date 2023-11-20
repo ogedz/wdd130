@@ -1,0 +1,112 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+nav {
+    float: right;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.admin-dashboard {
+    margin-top: 20px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    float: left;
+    background-color: #343a40;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+.dashboard-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.dashboard-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.board-item {
+    text-align: center;
+}
+
+.board-item h3 {
+    color: #343a40;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h3 {
+    color: #343a40;
+}
+
+.section p {
+    color: #555;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .dashboard-content {
+        margin-left: 0;
+    }
+}
