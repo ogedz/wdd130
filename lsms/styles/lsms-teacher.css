@@ -1,0 +1,172 @@
+/* Header Styles */
+/* ogedengbe */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(32, 24, 105); /* Light gray background color */
+    color: gold; /* Set default text color */
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Header Styles */
+header {
+    background-color: #343a40; /* Dark background color for the header */
+    color: #ffffff; /* Header text color */
+    padding: 10px;
+    text-align: center;
+}
+
+#logo_link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+#logo_link img {
+    width: 70px; /* Adjust logo width as needed */
+    margin-right: 10px; /* Add margin for separation between logo and text */
+}
+
+nav {
+    position: relative;
+    z-index: 2;
+    display: flex; /* Ensure the navigation links are displayed correctly */
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue color for navigation links */
+    display: inline-block; /* Ensure the links are displayed correctly */
+}
+
+nav a:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+.main-content h1 {
+    color: gold;
+    text-align: center;
+}
+
+.main-content p {
+    color: gold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.login-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-title {
+    font-size: 24px;
+}
+
+.modal-body {
+    text-align: left;
+    color: #007bff;
+    background-color: #343a40;
+}
+
+h5 {
+    color: #007bff;
+}
+/* Footer styles */
+footer {
+    background-color: #343a40; /* Dark background color for the footer */
+    color: gold;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    position: flex;
+    justify-content: space-around;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
+
+/* Social icons styles */
+.social img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack logo and navigation vertically */
+        text-align: center; /* Center text in header */
+    }
+
+    #logo_link {
+        margin-bottom: 10px; /* Add margin below the logo */
+    }
+
+    nav {
+        margin-top: 10px; /* Add margin above navigation links */
+    }
+
+    nav a {
+        display: block; /* Make navigation links full width */
+        margin-bottom: 10px; /* Add margin between navigation links */
+    }
+
+    .main-content {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Make images responsive */
+    }
+
+    .login-button {
+        margin: 15px auto; /* Adjust margin for the login button */
+    }
+
+    footer {
+        flex-direction: column; /* Stack footer items vertically */
+        text-align: center; /* Center text in the footer */
+    }
+}
+
