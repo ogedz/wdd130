@@ -64,7 +64,7 @@
                         </div>
                         <div class="modal-body">
                             <!-- Admin Login Form -->
-                            <form action="lsms-admin-dashboard.html" method="post">
+                            <form action="admin-dashboard.html" method="post">
                                 <div class="form-group">
                                     <label for="admin_id">School Unique ID:</label>
                                     <input type="text" id="admin_id" name="admin_id" class="form-control" required>
@@ -181,6 +181,11 @@
                     and integrity of your information.</p>
             </div>
         </section>
+        <section class="security-measures">
+            <div class="container">
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </section>
         <section class="faqs">
             <div class="container">
                 <h2>Frequently Asked Questions</h2>
@@ -194,7 +199,6 @@
                                 </button>
                             </h5>
                         </div>
-
                         <div id="faqCollapseOne" class="collapse show" aria-labelledby="faqHeadingOne"
                             data-parent="#faqsAccordion">
                             <div class="card-body">
@@ -206,16 +210,15 @@
                 </div>
                 <div class="accordion" id="faqsAccordion">
                     <div class="card">
-                        <div class="card-header" id="faqHeadingOne">
+                        <div class="card-header" id="faqHeadingTwo">
                             <h5 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    data-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                    data-target="#faqCollapseTwo" aria-expanded="true" aria-controls="faqCollapseTwo">
                                     How can I add or remove users from the system?
                                 </button>
                             </h5>
                         </div>
-
-                        <div id="faqCollapseOne" class="collapse show" aria-labelledby="faqHeadingOne"
+                        <div id="faqCollapseTwo" class="collapse show" aria-labelledby="faqHeadingTwo"
                             data-parent="#faqsAccordion">
                             <div class="card-body">
                                 As an administrator, you can manage users through the "User Management" section in the
@@ -224,17 +227,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingTwo">
+                </div>
+                <div class="accordion" id="faqsAccordion">
+                    <div class="card"> 
+                        <div class="card-header" id="faqHeadingThree">
                             <h5 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    data-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                    data-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
                                     Can I customize the system according to our school's specific needs?
                                 </button>
                             </h5>
                         </div>
-
-                        <div id="faqCollapseTwo" class="collapse" aria-labelledby="faqHeadingTwo"
+                        <div id="faqCollapseThree" class="collapse" aria-labelledby="faqHeadingThree"
                             data-parent="#faqsAccordion">
                             <div class="card-body">
                                 Yes, the Lifox School Management System is designed to be flexible. You can customize
@@ -243,16 +247,19 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="accordion" id="faqsAccordion">
                     <div class="card">
-                        <div class="card-header" id="faqHeadingThree">
+                        <div class="card-header" id="faqHeadingFour">
                             <h5 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    data-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                    data-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
                                     What security measures are in place to protect our school's data?
                                 </button>
                             </h5>
                         </div>
-                        <div id="faqCollapseThree" class="collapse" aria-labelledby="faqHeadingThree"
+                    <div class="card">
+                        <div id="faqCollapseFour" class="collapse" aria-labelledby="faqHeadingFour"
                             data-parent="#faqsAccordion">
                             <div class="card-body">
                                 We prioritize the security of your data. Our system uses industry-standard encryption
@@ -260,6 +267,7 @@
                                 assured, your information is handled with the utmost care.
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

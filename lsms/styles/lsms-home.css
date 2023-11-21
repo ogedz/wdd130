@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* Light gray background */
+  background-color: #1b1111; /* Light gray background */
   color: #333333; /* Dark gray text color */
   padding: 10px;
   box-sizing: border-box;
@@ -60,7 +60,7 @@ nav a:hover {
 
 /* Card Colors */
 .card-mt4 {
-  background-color: #3498db; /* Blue color for card-mt4 */
+  background-color: #1723c9; /* Blue color for card-mt4 */
   color: gold; /* White text on blue background */
 }
 
@@ -80,7 +80,7 @@ nav a:hover {
 }
 
 .card-mt7 {
-  background-color: #9b59b6; /* Purple color for card-mt7 */
+  background-color: rgb(116, 29, 150); /* Purple color for card-mt7 */
   color: gold; /* White text on purple background */
 }
 
