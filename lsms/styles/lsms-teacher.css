@@ -133,11 +133,15 @@ footer {
     margin: 0 5px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     header {
         flex-direction: column; /* Stack logo and navigation vertically */
         text-align: center; /* Center text in header */
     }
+
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+      }
 
     #logo_link {
         margin-bottom: 10px; /* Add margin below the logo */

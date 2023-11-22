@@ -42,12 +42,12 @@ nav a {
   margin: 0 10px;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: #07810c; /* Green background for navigation links */
+  background-color: #0f140f; /* Green background for navigation links */
   display: inline-block;
 }
 
 nav a:hover {
-  background-color: #0ac513; /* Darker green on hover */
+  background-color: #a9ccab; /* Darker green on hover */
 }
 
 /* Title Section Styles */
@@ -127,7 +127,10 @@ footer {
 
     header {
       padding: 5px; /* Adjust header padding */
+      flex-direction: column; /* Stack logo and navigation vertically */
+      text-align: center; /* Center text in header */
     }
+
     #logo_link {
       font-size: 18px; /* Adjust logo link font size */
     }
@@ -137,6 +140,7 @@ footer {
     nav a {
       display: block;
       padding: 15px;
+      margin-bottom: 10px;
     }
     .banner {
       width: 100%; /* Make the banner take the full width of the screen */
