@@ -280,6 +280,8 @@ nav a:hover {
 
     header {
         padding: 5px; /* Adjust header padding */
+        flex-direction: column; /* Stack logo and navigation vertically */
+        text-align: center; 
     }
 
     #logo_link {
@@ -293,7 +295,7 @@ nav a:hover {
     nav a {
         display: block;
         padding: 15px;
-        margin-bottom: 5px; /* Add margin between navigation links */
+        margin-bottom: 10px; /* Add margin between navigation links */
     }
 
     .advertisement img {

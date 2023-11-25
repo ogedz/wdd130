@@ -145,25 +145,27 @@ footer {
 
 @media only screen and (max-width: 767px) {
     header {
+        padding: 5px; /* Adjust header padding */
         flex-direction: column; /* Stack logo and navigation vertically */
         text-align: center; /* Center text in header */
     }
 
     body {
         font-size: 14px; /* Adjust font size for smaller screens */
-      }
-
-    #logo_link {
-        margin-bottom: 10px; /* Add margin below the logo */
     }
 
-    nav {
-        margin-top: 10px; /* Add margin above navigation links */
+    #logo_link {
+        font-size: 18px;
+    }
+
+    nav, footer {
+        flex-direction: column;
     }
 
     nav a {
-        display: block; /* Make navigation links full width */
-        margin-bottom: 5px; /* Add margin between navigation links */
+        display: block;
+        padding: 15px;
+        margin-bottom: 10px;
     }
 
     .main-content {
