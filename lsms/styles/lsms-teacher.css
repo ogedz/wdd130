@@ -144,16 +144,7 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-    header {
-        padding: 5px; /* Adjust header padding */
-        flex-direction: column; /* Stack logo and navigation vertically */
-        text-align: center; /* Center text in header */
-    }
-
-    body {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-
+    
     #logo_link {
         font-size: 18px;
     }
@@ -165,7 +156,6 @@ footer {
     nav a {
         display: block;
         padding: 15px;
-        margin-bottom: 10px;
     }
 
     .main-content {
