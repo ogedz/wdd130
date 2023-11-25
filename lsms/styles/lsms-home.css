@@ -1,7 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #1b1111; /* Light gray background */
-  color: #333333; /* Dark gray text color */
+  font-family: 'Roboto';
+  background-color: #1b1111; 
+  color: #0b2c15; 
   padding: 10px;
   box-sizing: border-box;
 }
@@ -9,10 +9,10 @@ body {
 /* Header styles */
 header {
   position: relative;
-  background-color: #07568b; /* Blue header background */
-  color: gold;
+  background-color: #18231C; 
   padding: 10px;
   text-align: center;
+  font-family: 'Quicksand';
 }
 
 .banner {
@@ -32,22 +32,22 @@ header {
 }
 
 #logo_link img {
-  width: 70px; /* Adjust logo width as needed */
-  margin-right: 10px; /* Add margin for separation between logo and text */
+  width: 70px; 
+  margin-right: 10px; 
 }
 
 nav a {
   text-decoration: none;
-  color: gold; /* White text for navigation links */
+  color: gold; 
   margin: 0 10px;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: #0f140f; /* Green background for navigation links */
+  background-color: #0f140f; 
   display: inline-block;
 }
 
 nav a:hover {
-  background-color: #a9ccab; /* Darker green on hover */
+  background-color: #a9ccab; 
 }
 
 /* Title Section Styles */
@@ -55,33 +55,33 @@ nav a:hover {
   text-align: center;
   margin-bottom: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #3498db; /* Blue heading color */
+  color: #3498db; 
 }
 
 /* Card Colors */
 .card-mt4 {
-  background-color: #1723c9; /* Blue color for card-mt4 */
-  color: gold; /* White text on blue background */
+  background-color: #1723c9; 
+  color: gold; 
 }
 
 .card-mt4-1 {
-  background-color: #e74c3c; /* Red color for card-mt4-1 */
-  color: gold; /* White text on red background */
+  background-color: #00c925; 
+  color: white; 
 }
 
 .card-mt5 {
-  background-color: rgb(60, 189, 9); /* Green color for card-mt5 */
-  color: gold; /* White text on green background */
+  background-color: rgb(9, 87, 189); 
+  color: gold; 
 }
 
 .card-mt6 {
-  background-color: #e67e22; /* Orange color for card-mt6 */
-  color: gold; /* White text on orange background */
+  background-color: #1b1b15; 
+  color: gold; 
 }
 
 .card-mt7 {
-  background-color: rgb(116, 29, 150); /* Purple color for card-mt7 */
-  color: gold; /* White text on purple background */
+  background-color: #181a3b; 
+  color: gold; 
 }
 
 h1 {
@@ -106,7 +106,7 @@ p {
 }
 /* Footer styles */
 footer {
-  background-color: #07568b; /* Blue footer background */
+  background-color: #18231C; 
   color: gold;
   text-align: center;
   padding: 10px;

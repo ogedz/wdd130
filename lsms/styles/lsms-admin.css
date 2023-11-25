@@ -3,8 +3,9 @@
 /* ogedengbe */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: goldenrod; /* Light gray background color */
-    color: #333333; /* Set default text color */
+    background-color: #212fc1; 
+    color: rgb(192, 164, 5); 
+    font-family: 'Roboto';
 }
 
 .clearfix::after {
@@ -15,10 +16,11 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #343a40; /* Dark background color for the header */
-    color: #ffffff; /* Header text color */
+    background-color: #043112; 
+    color: #ffffff; 
     padding: 10px;
     text-align: center;
+    font-family: "Quicksand";
 }
 
 #logo_link {
@@ -33,14 +35,14 @@ header {
   }
   
   #logo_link img {
-    width: 70px; /* Adjust logo width as needed */
-    margin-right: 10px; /* Add margin for separation between logo and text */
+    width: 70px; 
+    margin-right: 10px; 
   }
 
 nav {
     position: relative;
     z-index: 2;
-    display: flex; /* Ensure the navigation links are displayed correctly */
+    display: flex; 
     justify-content: center;
     margin-top: 10px;
 }
@@ -51,21 +53,21 @@ nav a {
     margin: 0 10px;
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: #007bff; /* Blue color for navigation links */
-    display: inline-block; /* Ensure the links are displayed correctly */
+    background-color: #007bff; 
+    display: inline-block; 
 }
 
 nav a:hover {
-    background-color: #0056b3; /* Darker blue color on hover */
+    background-color: #0056b3; 
 }
 
 /* Admin Page Styles */
 .admin-page {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #ffffff; /* White background for the admin page */
+    background-color: #ffffff; 
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     padding: 20px;
     margin-top: 20px;
 }
@@ -126,6 +128,7 @@ nav a:hover {
 /* Administrator Responsibilities Section Styles */
 .admin-responsibilities {
     margin-top: 30px;
+    text-align: center;
 }
 
 .admin-responsibilities h2 {
@@ -241,7 +244,7 @@ nav a:hover {
 
  /* Footer styles */
  footer {
-    background-color: #343a40; /* Dark background color for the footer */
+    background-color: #043112; 
     color: #ffffff;
     text-align: center;
     padding: 10px;

@@ -1,7 +1,7 @@
 /* Header Styles */
 /* ogedengbe */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto';
     background-color: rgb(32, 24, 105); /* Light gray background color */
     color: gold; /* Set default text color */
 }
@@ -18,6 +18,7 @@ header {
     color: #ffffff; /* Header text color */
     padding: 10px;
     text-align: center;
+    font-family: 'Quicksand';
 }
 
 #logo_link {
@@ -91,6 +92,15 @@ nav a:hover {
     border-radius: 5px;
 }
 
+#p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#readMore {
+    align-items: center;
+}
+
 .modal-content {
     border-radius: 10px;
 }
@@ -153,7 +163,7 @@ footer {
 
     nav a {
         display: block; /* Make navigation links full width */
-        margin-bottom: 10px; /* Add margin between navigation links */
+        margin-bottom: 5px; /* Add margin between navigation links */
     }
 
     .main-content {

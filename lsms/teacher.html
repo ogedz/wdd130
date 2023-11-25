@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Home Page</title>>
+    <title>Teacher Home Page</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/lsms-teacher.css">    
+    <link rel="stylesheet" href="styles/lsms-teacher.css">
+    <style>
+        #readMore {
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,8 +25,12 @@
             </a>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="#">About</a>
-                <a href="#">Resources</a>
+                <a href="index.html">Home</a>
+                <a href="admin.html">Admin</a>
+                <a href="teacher.html">Teacher</a>
+                <a href="student.html">Student</a>
+                <a href="parent.html">Parent</a>
+                <a href="cbt.html">CBT</a>
                 <a href="contactus.html">Contact Us</a>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#teacherLoginModal">
@@ -29,22 +39,54 @@
             </nav>
         </header>
 
-        <div class="main-content">
-            <h1>Welcome to the Lifox School Management System</h1>
-            <p>Explore resources and information for teachers.</p>
-
-            <div class="image-container">
-                <img src="images/img_teacher1.png" alt="Teacher Image">
-            </div>
-
-            <p>.</p>
-
-            <div class="image-container">
-                <img src="images/img_teacher2.png" alt="Classroom Image">
-            </div>
+    <div class="main-content">
+        <h1>Welcome to the Lifox School Management System</h1>
+        <p>Explore resources and information for teachers.</p>
+    
+        <div class="image-container">
+            <img src="images/img_teacher1.png" alt="Teacher Image">
+        </div>
+    
+        <ul id="introText">
+            <li>Welcome to Your Teacher Dashboard! Welcome to your dedicated Teacher Dashboard at LSMS. This is your
+                virtual classroom management tool, designed to make teaching and communication with students and parents
+                effortless.</li>
+        </ul>
+    
+        <ul id="fullText" style="display: none;">
+            <li>Empowering Educators: At LSMS, we believe in empowering our educators. Your Teacher Dashboard is your ally
+                in providing a top-notch education. Manage your classes, grades, and communication all in one place.</li>
+    
+            <li>Your Classroom, Your Control: Teacher, take control of your classroom with ease. This Teacher Dashboard is
+                tailored to your needs, helping you maintain organized classes and efficient communication with students
+                and parents.</li>
+    
+            <li>Enhancing the Teaching Experience: Welcome to your personal teaching companion. Your Teacher Dashboard is
+                here to enhance your teaching experience. From managing classes to sharing resources, it's your one-stop
+                solution.</li>
+    
+            <li>Efficiency for Educators: Efficiency meets education here. Your Teacher Dashboard is designed to streamline
+                your daily tasks, allowing you to focus on what you do best: educating the next generation.</li>
+    
+            <li>Key Information in One Place: Your Teacher Dashboard offers all the essential information and tools you
+                need. Stay updated on class progress, post assignments, communicate with ease, and take care of
+                administrative duties.</li>
+    
+            <li>Teaching, Simplified: Welcome to your Teacher Dashboard, where teaching becomes simplified. Manage your
+                classes and subjects, enter grades, and communicate effectively with students and parents, all in one
+                spot.</li>
+    
+            <li>Your Teaching Headquarters: Your Teacher Dashboard is your dedicated teaching headquarters. Manage your
+                classes, enter grades, communicate seamlessly, and stay connected with your students and their parents.</li>
+        </ul>
+    
+        <span id="readMore" onclick="toggleText()">Read more...</span>
+    
+        <div class="image-container">
+            <img src="images/img_teacher2.png" alt="Classroom Image">
         </div>
     </div>
-
+     
     <!-- Teacher Login Modal -->
     <div class="modal fade" id="teacherLoginModal" tabindex="-1" role="dialog" aria-labelledby="teacherLoginModalLabel"
         aria-hidden="true">
@@ -106,6 +148,24 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <script>
+        function toggleText() {
+            var introText = document.getElementById("introText");
+            var fullText = document.getElementById("fullText");
+            var readMore = document.getElementById("readMore");
+
+            if (fullText.style.display === "none") {
+                introText.style.display = "none";
+                fullText.style.display = "block";
+                readMore.innerText = "Read less...";
+            } else {
+                introText.style.display = "block";
+                fullText.style.display = "none";
+                readMore.innerText = "Read more...";
+            }
+        }
+    </script>
 </body>
 
 </html>
