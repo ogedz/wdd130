@@ -4,7 +4,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #212fc1; 
-    color: rgb(192, 164, 5); 
+    color: gold; 
     font-family: 'Roboto';
 }
 
@@ -65,7 +65,7 @@ nav a:hover {
 .admin-page {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #ffffff; 
+    background-color: green; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     padding: 20px;
