@@ -144,35 +144,44 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-    
+    body {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  
+    header {
+      padding: 5px; /* Adjust header padding */
+      flex-direction: column; /* Stack logo and navigation vertically */
+      text-align: center; /* Center text in header */
+    }
+
     #logo_link {
-        font-size: 18px;
+      font-size: 18px;
     }
 
     nav, footer {
-        flex-direction: column;
+      flex-direction: column;
     }
 
     nav a {
-        display: block;
-        padding: 15px;
+      display: block;
+      padding: 15px;
     }
 
     .main-content {
-        padding: 10px; /* Adjust padding for smaller screens */
+      padding: 10px; /* Adjust padding for smaller screens */
     }
 
     .image-container img {
-        max-width: 100%; /* Make images responsive */
+      max-width: 100%; /* Make images responsive */
     }
 
     .login-button {
-        margin: 15px auto; /* Adjust margin for the login button */
+      margin: 15px auto; /* Adjust margin for the login button */
     }
 
     footer {
-        flex-direction: column; /* Stack footer items vertically */
-        text-align: center; /* Center text in the footer */
+      flex-direction: column; /* Stack footer items vertically */
+      text-align: center; /* Center text in the footer */
     }
 }
 
