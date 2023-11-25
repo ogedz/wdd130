@@ -4,16 +4,13 @@ body {
     font-family: 'Roboto';
     background-color: rgb(32, 24, 105); /* Light gray background color */
     color: gold; /* Set default text color */
-}
-
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 /* Header Styles */
 header {
+    position: relative;
     background-color: #343a40; /* Dark background color for the header */
     color: #ffffff; /* Header text color */
     padding: 10px;
