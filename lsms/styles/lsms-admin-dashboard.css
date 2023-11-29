@@ -1,110 +1,179 @@
-/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Roboto';
+  background-color: #172ceb; 
+  color: #09110c; 
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0; /* Remove default margin to prevent unwanted space */
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+h1 {
+  text-align: center;
 }
 
-/* Header Styles */
-header {
-    background-color: #343a40;
-    color: #ffffff;
-    padding: 10px;
-}
-
-#logo_link {
-    float: left;
-    margin-right: 20px;
+.logo-container {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-    max-width: 100%;
-    height: auto;
+  max-width: 100px;
 }
 
-nav {
-    float: right;
+/* Container and card styling */
+.container {
+  margin-left: 220px;
+  padding: 0 16px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Main Wrapper Styles */
-.main-wrapper {
-    display: flex;
-}
-
-/* Sidebar Styles */
-.sidebar {
-    background-color: #343a40;
-    color: #ffffff;
-    width: 250px;
-    height: 100vh;
-    overflow-y: auto;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    transition: all 0.3s;
-}
-
-.sidebar-inner {
-    padding: 20px;
-}
-
-#sidebar-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-#sidebar-menu ul li {
-    padding: 10px 0;
-}
-
-#sidebar-menu ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-/* Content Styles */
-#content {
-    flex: 1;
-    padding: 20px;
-}
-
-/* Footer Styles */
+/* Footer styling */
 footer {
-    background-color: #343a40;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
+  background-color: #18231C; 
+  color: gold;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  position: fixed; /* Ensure the footer stays at the bottom */
+  bottom: 0;
 }
 
+.footer p {
+  margin-bottom: 5px;
+}
+
+/* Social icons styles */
 .social img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
 }
 
-/* Media Query for Responsive Design */
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 220px; /* Adjusted width for better alignment */
+  background-color: rgb(6, 165, 20);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 220px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+      text-align: center;
+      float: none;
+  }
+}
+
+/* Media Query for responsiveness */
 @media (max-width: 768px) {
-    .sidebar {
-        left: 0;
-    }
+  .container {
+      margin-left: 0;
+      padding: 0 8px;
+  }
 
-    #menu-toggle {
-        display: block;
-    }
+  .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+  }
 
-    nav {
-        display: none;
-    }
+  .sidebar a {
+      text-align: center;
+      padding: 8px;
+      display: block; /* Adjusted display for better stacking */
+      width: 100%;
+  }
+
+  .logo-container {
+      justify-content: center;
+  }
+
+  /* Adjust other styles as needed for responsiveness */
+}
+
+/* Additional styles for dashboard sections */
+.dashboard-section {
+  display: none;
+}
+
+.active-section {
+  display: block;
+}
+
+.info-panel {
+  background-color: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.info-panel h4 {
+  margin-bottom: 10px;
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  flex-basis: calc(33.33% - 20px);
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }

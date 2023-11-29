@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifox School Management System - Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/lsms-admin-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="content">
+        <header class="clearfix">
+            <div class="logo-container">
+                <a id="logo_link" href="index.html">
+                    <img class="logo" src="images/logo.png" alt="lsms logo">
+                </a>
+            </div>
+
+            <!-- The sidebar -->
+            <div class="sidebar">
+                <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+                <a href="#students" onclick="showSection('students-section')"><i class="fa fa-fw fa-user-graduate"></i> Students</a>
+                <a href="#teachers" onclick="showSection('teachers-section')"><i class="fa fa-fw fa-chalkboard-teacher"></i> Teachers</a>
+                <a href="#parents" onclick="showSection('parents-section')"><i class="fa fa-fw fa-users"></i> Parents</a>
+                <a href="#tasks" onclick="showSection('tasks-section')"><i class="fa fa-fw fa-tasks"></i> Tasks</a>
+                <a href="#grades" onclick="showSection('grades-section')"><i class="fa fa-fw fa-graduation-cap"></i> Grades</a>
+                <a href="#subjects" onclick="showSection('subjects-classes-section')"><i class="fa fa-fw fa-book"></i> Subjects</a>
+                <a href="#classes" onclick="showSection('classes-section')"><i class="fa fa-fw fa-school"></i> Classes</a>
+                <a href="#settings" onclick="showSection('settings-section')"><i class="fa fa-fw fa-cogs"></i> Settings</a>
+            </div>
+        </header>
+
+        <div class="container">
+            <h1>Admin Dashboard</h1>
+
+            <!-- Student Account Section -->
+            <section id="students-section" class="dashboard-section">
+                <h2>Student Account Management</h2>
+                <button onclick="createStudentAccount()">Create Student Account</button>
+                <button onclick="editStudentAccount()">Edit Student Account</button>
+                <button onclick="deleteStudentAccount()">Delete Student Account</button>
+            </section>
+
+            <!-- Teacher Account Section -->
+            <section id="teachers-section" class="dashboard-section">
+                <h2>Teacher Account Management</h2>
+                <button onclick="createTeacherAccount()">Create Teacher Account</button>
+                <button onclick="editTeacherAccount()">Edit Teacher Account</button>
+                <button onclick="deleteTeacherAccount()">Delete Teacher Account</button>
+            </section>
+
+            <!-- Parent Account Section -->
+            <section id="parents-section" class="dashboard-section">
+                <h2>Parent Account Management</h2>
+                <button onclick="createParentAccount()">Create Parent Account</button>
+                <button onclick="editParentAccount()">Edit Parent Account</button>
+                <button onclick="deleteParentAccount()">Delete Parent Account</button>
+            </section>
+
+            <!-- Posting Tasks/Updates Section -->
+            <section id="tasks-section" class="dashboard-section">
+                <h2>Post Tasks/Updates</h2>
+                <textarea id="postUpdate" placeholder="Write the task or update here..."></textarea>
+                <button onclick="postUpdate()">Post</button>
+            </section>
+
+            <!-- Manage Grades Section -->
+            <section id="grades-section" class="dashboard-section">
+                <h2>Manage Student's Grades</h2>
+                <button onclick="storeGrade()">Store Grade</button>
+                <button onclick="editGrade()">Edit Grade</button>
+                <button onclick="deleteGrade()">Delete Grade</button>
+                <button onclick="calculateGrades()">Calculate Grades</button>
+                <button onclick="printReportSheet()">Print Report Sheet</button>
+                <button onclick="printBroadSheet()">Print Broadsheet</button>
+            </section>
+
+            <!-- Manage Classes Section -->
+            <section id="classes-section" class="dashboard-section">
+                <h2>Manage Classes</h2>
+                <button onclick="addClass()">Add Class</button>
+                <button onclick="editClass()">Edit Class</button>
+                <button onclick="deleteClass()">Delete Class</button>
+            </section>
+
+            <!-- Manage Subjects Section -->
+            <section id="subjects-section" class="dashboard-section">
+                <h2>Manage Subjects</h2>
+                <button onclick="addSubject()">Add Subject</button>
+                <button onclick="editSubject()">Edit Subject</button>
+                <button onclick="deleteSubject()">Delete Subject</button>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings-section" class="dashboard-section">
+                <h2>System Settings</h2>
+                <button onclick="generalSettings()">General Settings</button>
+                <button onclick="securitySettings()">Security Settings</button>
+            </section>
+        </div>
+
+        <footer>
+            <p>© 2023 Lifox School Management System | Ogedengbe | All rights reserved.</p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/fb.jpg" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/feather.min.js"></script>
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            $(".dashboard-section").hide();
+
+            // Show the clicked section
+            $("#" + sectionId).show();
+        }
+    </script>
+</body>
+
+</html>
