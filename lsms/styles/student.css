@@ -9,32 +9,49 @@ body {
 }
 
 header {
-    background-color: #3498db;
-    color: #fff;
+    position: relative;
+    background-color: #043112; 
+    color: #ffffff; 
     padding: 10px;
     text-align: center;
+    font-family: "Quicksand";
 }
 
-.logo-nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.logo {
-    max-width: 100px;
-}
+#logo_link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #logo_link img {
+    width: 70px; 
+    margin-right: 10px; 
+  }
 
 nav {
-    display: flex;
-    align-items: center;
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    margin-top: 10px;
 }
 
 nav a {
-    margin: 0 10px;
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #007bff; 
+    display: inline-block; 
+}
+
+nav a:hover {
+    background-color: #0056b3; 
 }
 
 .student-page {
@@ -47,7 +64,6 @@ footer {
     text-align: center;
     padding: 10px;
     display: flex;
-    position: flex;
     justify-content: space-around;
     bottom: 0;
     width: 100%;
@@ -84,14 +100,7 @@ footer {
     .login-container {
         max-width: 100%;
     }
-}
 
-
-
-
-/* Media Query for responsiveness */
-@media (max-width: 768px) {
-    /* Adjust styles for smaller screens */
     h1, h2 {
         font-size: 1.5em;
     }
