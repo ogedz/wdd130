@@ -251,7 +251,6 @@ nav a:hover {
     text-align: center;
     padding: 10px;
     display: flex;
-    position: flex;
     justify-content: space-around;
     bottom: 0;
     width: 100%;
