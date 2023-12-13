@@ -1,0 +1,83 @@
+/* student.css */
+
+body {
+    font-family: 'Roboto';
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.student-page {
+    padding: 20px;
+}
+
+footer {
+    background-color: #18231C;
+    color: gold;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .profile-section, .courses-section, .grades-section, .attendance-section {
+        margin-bottom: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+    .grades-list,
+    .assignments-list {
+    flex-direction: column;
+    }
+
+    .grade-item,
+    .assignment-item {
+    width: 100%;
+    }
+}

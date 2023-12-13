@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT Exam</title>
+    <link rel="stylesheet" href="styles/cbt.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Timer Display -->
+        <div class="timer">
+            Time left: <span id="time">30:00</span>
+        </div>
+
+        <!-- Student Login Section -->
+        <section id="loginSection" class="mb-4">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </section>
+
+        <!-- Subject and Class Selection - Hidden Initially -->
+        <section id="selectionSection" class="mb-4" style="display: none;">
+            <h2>Select Subject and Class</h2>
+            <form id="subjectClassForm">
+                <div class="form-group">
+                    <label for="subjectSelect">Subject:</label>
+                    <select id="subjectSelect" class="form-control mb-3"></select>
+                </div>
+                <div class="form-group">
+                    <label for="classSelect">Class:</label>
+                    <select id="classSelect" class="form-control mb-3"></select>
+                </div>
+                <button type="submit" class="btn btn-primary">Start Exam</button>
+            </form>
+        </section>
+
+        <!-- CBT Exam Section - Hidden Initially -->
+        <section id="examSection" class="mb-4" style="display: none;">
+            <!-- Your exam questions and options will be inserted here -->
+        </section>
+    </div>
+    <!-- JS Script -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    fetch('https://your-backend-endpoint.com/api/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.token) {
+            localStorage.setItem('studentToken', data.token);
+            document.getElementById('loginSection').style.display = 'none';
+            document.getElementById('selectionSection').style.display = 'block';
+            fetchSubjectsAndClasses(data.token);
+        } else {
+            alert('Login failed. Please try again.');
+        }
+    })
+    .catch(error => console.error('Login Error:', error));
+});
+
+function fetchSubjectsAndClasses(token) {
+    fetch('https://your-backend-endpoint.com/api/subjectsAndClasses', {
+        headers: {
+            'Authorization': 'Bearer ' + token
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Populate subjects and classes dropdowns
+        const subjectSelect = document.getElementById('subjectSelect');
+        const classSelect = document.getElementById('classSelect');
+        
+        data.subjects.forEach(subject => {
+            const option = document.createElement('option');
+            option.value = subject.id;
+            option.textContent = subject.name;
+            subjectSelect.appendChild(option);
+        });
+
+        data.classes.forEach(cls => {
+            const option = document.createElement('option');
+            option.value = cls.id;
+            option.textContent = cls.name;
+            classSelect.appendChild(option);
+        });
+    })
+    .catch(error => console.error('Fetching Subjects and Classes Error:', error));
+}
+
+// Fetch exam questions based on selected subject and class
+document.getElementById('subjectClassForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const subjectId = document.getElementById('subjectSelect').value;
+    const classId = document.getElementById('classSelect').value;
+    const token = localStorage.getItem('studentToken');
+
+    fetch(`https://your-backend-endpoint.com/api/questions?subjectId=${subjectId}&classId=${classId}`, {
+        headers: {
+            'Authorization': 'Bearer ' + token
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Populate exam section with fetched questions
+        // Hide selectionSection and display examSection
+        document.getElementById('selectionSection').style.display = 'none';
+        document.getElementById('examSection').style.display = 'block';
+        startTimer();
+    })
+    .catch(error => console.error('Fetching Exam Questions Error:', error));
+});
+
+// ... The rest of the timer and exam code ...
+let remainingTime = 10 * 60;  // 10 minutes in seconds
+const timeDisplay = document.getElementById('time');
+
+document.getElementById('cbtForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    gradeExam();
+});
+
+function startTimer() {
+    const timerInterval = setInterval(function() {
+        if (remainingTime <= 0) {
+            clearInterval(timerInterval);
+            gradeExam();
+            alert("Time's up!");
+        }
+        const minutes = Math.floor(remainingTime / 60);
+        const seconds = remainingTime % 60;
+        timeDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        remainingTime--;
+    }, 1000);
+}
+
+function gradeExam() {
+    let score = 0;
+
+    // Sample grading for the first question
+    const q1Value = document.querySelector('input[name="q1"]:checked').value;
+    if (q1Value === 'c') {
+        score++;
+    }
+
+    // Continue with grading for other questions...
+
+    alert(`Your score is: ${score}`);
+}
+
+// Start the timer when the page loads
+startTimer();
+
+ 
+    </script>
+</body>
+
+</html>

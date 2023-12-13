@@ -1,0 +1,71 @@
+<!-- student.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifox School Management System - Student</title>
+    <link rel="stylesheet" href="styles/student.css">
+</head>
+
+<body>
+    <div id="content">
+        <header class="clearfix">
+            <div class="logo-nav-container">
+                <a id="logo_link" href="index.html">
+                    <img class="logo" src="images/logo.png" alt="lsms logo">
+                </a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="admin.html">Admin</a>
+                    <a href="teacher.html">Teacher</a>
+                    <a href="student.html">Student</a>
+                    <a href="parent.html">Parent</a>
+                    <a href="cbt.html">CBT</a>
+                    <a href="contactus.html">Contact Us</a>
+                    <a href="student-login.html">Login</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="student-page">
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var isLoggedIn = localStorage.getItem("studentLoggedIn");
+
+                    if (!isLoggedIn) {
+                        window.location.href = "student-login.html";
+                    }
+                });
+            </script>
+
+            <h1>Welcome to the Student Dashboard</h1>
+            <!-- Rest of the student page content goes here -->
+
+        </div>
+
+        <footer class="mt-5">
+            <p>© 2023 Lifox School Management System | Ogedengbe | All rights reserved.</p>
+            <a href="https://ogedz.github.io/wdd130/lifoxedu/site-plan.html">Site plan</a>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/fb.jpg" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

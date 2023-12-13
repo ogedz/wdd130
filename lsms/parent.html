@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifox School Management System - Parent Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="parents.css">
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+    <!-- Parent Login Section -->
+    <section class="mb-4">
+        <h2>Login</h2>
+        <form id="parentLoginForm" class="mb-4">
+            <div class="form-group">
+                <label for="parentUsername">Username:</label>
+                <input type="text" id="parentUsername" name="parentUsername" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="parentPassword">Password:</label>
+                <input type="password" id="parentPassword" name="parentPassword" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </section>
+
+    <!-- View Children's Grades Section -->
+    <section class="mb-4">
+        <h2>Children's Grades</h2>
+        <label for="childSelect">Select Child:</label>
+        <select id="childSelect" class="form-control mb-3" onchange="fetchChildGrades()"></select> <!-- Populated from backend based on parent -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>1st C.A</th>
+                    <th>2nd C.A</th>
+                    <th>3rd C.A</th>
+                    <th>Exam</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="childGradesTable">
+                
+            </tbody>
+        </table>
+    </section>
+    
+    <!-- Contact Section -->
+    <section>
+        <h2>Contact Teachers and Headmaster</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="contactSelect">Select Teacher or Headmaster:</label>
+                <select id="contactSelect" class="form-control mb-3">
+                  
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="contactMessage">Message:</label>
+                <textarea id="contactMessage" class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function fetchChildNames() {
+    // Supposed endpoint: https://your-backend-endpoint.com/api/parent/children
+    fetch('https://your-backend-endpoint.com/api/parent/children', {
+        method: 'GET',
+        headers: {
+            // If you use token-based authentication, it might look something like this:
+            'Authorization': 'Bearer ' + localStorage.getItem('parentToken')
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const childSelect = document.getElementById('childSelect');
+        data.forEach(child => {
+            const option = document.createElement('option');
+            option.value = child.id;
+            option.textContent = child.name;
+            childSelect.appendChild(option);
+        });
+    })
+    .catch(error => console.error('Error fetching children:', error));
+}
+
+function fetchChildGrades() {
+    const childId = document.getElementById('childSelect').value;
+
+    // Supposed endpoint: https://your-backend-endpoint.com/api/grades/{childId}
+    fetch(`https://your-backend-endpoint.com/api/grades/${childId}`, {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + localStorage.getItem('parentToken')
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const gradesTable = document.getElementById('childGradesTable');
+        gradesTable.innerHTML = '';  // Clear the previous grades
+        
+        // Populate grades for the selected child
+        data.forEach(grade => {
+            const row = gradesTable.insertRow();
+            row.innerHTML = `
+                <td>${grade.subject}</td>
+                <td>${grade.firstCA}</td>
+                <td>${grade.secondCA}</td>
+                <td>${grade.thirdCA}</td>
+                <td>${grade.exam}</td>
+                <td>${grade.total}</td>
+            `;
+        });
+    })
+    .catch(error => console.error('Error fetching grades:', error));
+}
+</script>
+
+</body>
+</html>

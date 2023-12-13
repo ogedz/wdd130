@@ -1,0 +1,70 @@
+<!-- student-login.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifox School Management System - Student Login</title>
+    <link rel="stylesheet" href="styles/student-login.css">
+</head>
+
+<body>
+    <div id="content">
+        <header class="clearfix">
+            <div class="logo-nav-container">
+                <a id="logo_link" href="index.html">
+                    <img class="logo" src="images/logo.png" alt="lsms logo">
+                </a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="admin.html">Admin</a>
+                    <a href="teacher.html">Teacher</a>
+                    <a href="student.html">Student</a>
+                    <a href="parent.html">Parent</a>
+                    <a href="cbt.html">CBT</a>
+                    <a href="contactus.html">Contact Us</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="login-container">
+            <h1>Student Login</h1>
+            <form action="student.html" method="post">
+                <div class="form-group">
+                    <label for="student_id">Student ID:</label>
+                    <input type="text" id="student_id" name="student_id" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <button type="submit" class="btn btn-primary btn-block">Forgot password?</button>
+            </form>
+        </div>
+
+        <footer class="mt-5">
+            <p>© 2023 Lifox School Management System | Ogedengbe | All rights reserved.</p>
+            <a href="https://ogedz.github.io/wdd130/lifoxedu/site-plan.html">Site plan</a>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/fb.jpg" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
