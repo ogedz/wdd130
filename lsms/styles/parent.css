@@ -154,22 +154,28 @@ select.form-control {
   }
 
 /* Media Query */
-@media (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+    body {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  
     header {
-        padding: 20px;
+      padding: 5px; /* Adjust header padding */
+      flex-direction: column; /* Stack logo and navigation vertically */
+      text-align: center; /* Center text in header */
     }
 
-    #logo_link img {
-        width: 50px;
+    #logo_link {
+      font-size: 18px;
     }
 
-    nav {
-        flex-direction: column;
-        align-items: center;
+    nav, footer {
+      flex-direction: column;
     }
 
     nav a {
-        margin: 5px 0;
+      display: block;
+      padding: 15px;
     }
 
     .container {
@@ -181,12 +187,7 @@ select.form-control {
     }
 
     footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .social img {
-        margin: 5px;
-    }
+        flex-direction: column; /* Stack footer items vertically */
+        text-align: center; /* Center text in the footer */
+      }
 }
