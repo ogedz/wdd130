@@ -2,7 +2,7 @@
 /* ogedengbe */
 body {
     font-family: 'Roboto';
-    background-color: rgb(32, 24, 105); /* Light gray background color */
+    background-color: rgb(32, 24, 105); 
     color: gold; /* Set default text color */
     box-sizing: border-box;
     padding: 10px;
@@ -33,19 +33,20 @@ header {
     width: 70px; /* Adjust logo width as needed */
     margin-right: 10px; /* Add margin for separation between logo and text */
 }
-
+/*
 nav {
     position: relative;
-    z-index: 2;
-    display: flex; /* Ensure the navigation links are displayed correctly */
+    z-index: 1;
+    display: flex; 
     justify-content: center;
     margin-top: 10px;
-}
+}*/
 
 nav a {
     text-decoration: none;
-    color: #ffffff;
+    color: black;
     margin: 0 10px;
+    z-index: 1;
     padding: 5px 10px;
     border-radius: 5px;
     background-color: #007bff; /* Blue color for navigation links */
