@@ -172,22 +172,23 @@ select.form-control {
     nav, footer {
       flex-direction: column;
     }
-
+  
     nav a {
       display: block;
       padding: 15px;
+      margin-bottom: 10px; /* Add margin between navigation links */
     }
 
     .container {
-        padding: 20px;
+      padding: 20px;
     }
 
     h2 {
-        font-size: 20px;
+      font-size: 20px;
     }
 
     footer {
-        flex-direction: column; /* Stack footer items vertically */
-        text-align: center; /* Center text in the footer */
-      }
+      flex-direction: column; /* Stack footer items vertically */
+    text-align: center; /* Center text in the footer */
+    }
 }
