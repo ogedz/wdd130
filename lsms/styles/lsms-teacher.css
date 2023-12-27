@@ -33,14 +33,6 @@ header {
     width: 70px; /* Adjust logo width as needed */
     margin-right: 10px; /* Add margin for separation between logo and text */
 }
-/*
-nav {
-    position: relative;
-    z-index: 1;
-    display: flex; 
-    justify-content: center;
-    margin-top: 10px;
-}*/
 
 nav a {
     text-decoration: none;
@@ -49,7 +41,7 @@ nav a {
     z-index: 1;
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: #007bff; /* Blue color for navigation links */
+    background-color: none; 
     display: inline-block; /* Ensure the links are displayed correctly */
 }
 
