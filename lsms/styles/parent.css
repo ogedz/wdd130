@@ -153,33 +153,6 @@ select.form-control {
     margin: 0 5px;
   }
 
-
-/*footer {
-    background-color: #043112;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    align-items: center;
-    z-index: 1000; 
-}
-
-.footer p {
-    margin-bottom: 5px;
-}
-
-
-.social img {
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
-}*/
-
 /* Media Query */
 @media (max-width: 768px) {
     header {
