@@ -129,17 +129,18 @@ nav a:hover {
     text-align: center;
 }
 
+.admin-responsibilities img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
 .admin-responsibilities h2 {
     text-align: center;
 }
 
-.admin-responsibilities ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.admin-responsibilities li {
-    margin-bottom: 10px;
+.admin-responsibilities p {
+    text-align: center;
 }
 
 /* Available Tools Section Styles */

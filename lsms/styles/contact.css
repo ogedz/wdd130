@@ -111,8 +111,12 @@ button {
   background-color: #1d6091;
 }
 
-.container1, p {
-    background-color: #343a40;
+.container1 {
+  background-color: rgb(60, 36, 196);
+}
+
+p {
+  color: white;
 }
   
 #feedback {
@@ -155,14 +159,17 @@ button {
   }
 
  /* Responsive styles for mobile phones and small screens */
- @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   body {
     font-size: 14px; /* Adjust font size for smaller screens */
   }
 
   header {
     padding: 5px; /* Adjust header padding */
+    flex-direction: column; /* Stack logo and navigation vertically */
+    text-align: center; 
   }
+
   #logo_link {
     font-size: 18px; /* Adjust logo link font size */
   }
@@ -172,6 +179,7 @@ button {
   nav a {
     display: block;
     padding: 15px;
+    margin-bottom: 10px; /* Add margin between navigation links */
   }
 
   .containers {
@@ -191,7 +199,7 @@ button {
     margin-bottom: 10px; /* Add margin between containers */
   }
   footer {
-    margin-top: 25px;
+    margin-top: 15px;
     }
     .social img {
       width: 20px; /* Adjust social icon size */
