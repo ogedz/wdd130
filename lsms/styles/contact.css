@@ -111,12 +111,17 @@ button {
   background-color: #1d6091;
 }
 
-.container1 {
+.container1  {
   background-color: rgb(60, 36, 196);
 }
 
+.container1, a  {
+  color: gold;
+}
+
 p {
-  color: white;
+  color: rgba(243, 239, 15, 0.911);
+  font-size: medium;
 }
   
 #feedback {

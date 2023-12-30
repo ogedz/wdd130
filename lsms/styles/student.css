@@ -70,9 +70,16 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
+.contact {
+  color: #f4f4f4;
+}
+
+.mt-5, a {
+   color: #007bff;
+}
+
 footer {
     background-color: #043112; 
-    color: #ffffff;
     text-align: center;
     padding: 10px;
     display: flex;
