@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Tangerine');
+/*@import url('https://fonts.googleapis.com/css?family=Tangerine');
 
 body {
   background-color: rgb(24, 16, 16);
@@ -17,7 +17,7 @@ body {
 }
 
 footer {
-  margin-top: auto; /* This will push the footer to the bottom */
+  margin-top: auto;
 }
 
 nav {
@@ -136,11 +136,97 @@ p {
 
 .moveDown {
   margin-top: 3em;
+}*/
+
+/* Default Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #141615;
 }
 
- /* Footer styles */
+.container1 {
+  background-color: #111114;
+  color: white;
+  padding: 10px;
+}
+
+.container1, a  {
+  color: gold;
+}
+
+
+#content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #11db6c;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
 footer {
-  background-color: #343a40; /* Dark background color for the footer */
+  background-color: #111114;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.social img {
+  width: 30px;
+  margin: 0 5px;
+}
+
+/* Footer styles 
+footer {
+  background-color: #343a40; 
   color: gold;
   text-align: center;
   padding: 10px;
@@ -156,12 +242,13 @@ footer {
   margin-bottom: 5px;
 }
   
-  /* Social icons styles */
+  
 .social img {
   width: 30px;
   height: 30px;
   margin: 0 5px;
-}
+}*/
+
 /* Media Query for Responsive Design */
 @media screen and (max-width: 600px) {
   #content {
