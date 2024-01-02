@@ -139,31 +139,31 @@ p {
 }
 
  /* Footer styles */
- footer {
-    background-color: #343a40; /* Dark background color for the footer */
-    color: gold;
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    position: relative;
-    justify-content: space-around;
-    bottom: 0;
-    width: 100%;
-    align-items: center;
-  }
+footer {
+  background-color: #343a40; /* Dark background color for the footer */
+  color: gold;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+}
   
-  .footer p {
-    margin-bottom: 5px;
-  }
+.footer p {
+  margin-bottom: 5px;
+}
   
   /* Social icons styles */
-  .social img {
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
-  }
+.social img {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+}
 
- /* Responsive styles for mobile phones and small screens */
+/* Responsive Styles for Smaller Screens */
 @media screen and (max-width: 767px) {
   body {
     font-size: 14px; /* Adjust font size for smaller screens */
@@ -178,37 +178,38 @@ p {
   #logo_link {
     font-size: 18px; /* Adjust logo link font size */
   }
+
   nav, footer {
     flex-direction: column;
   }
+
   nav a {
     display: block;
     padding: 15px;
     margin-bottom: 10px; /* Add margin between navigation links */
   }
 
-  #content {
-    flex-direction: column; /* Adjust container layout for smaller screens */
-    align-items: center;
+  .advertisement img {
+    margin-top: 15px; /* Add space between advertisement image and text */
   }
-  .container {
-    flex: 1;
-    min-height: auto; /* Adjust minimum height for containers */
-    margin-right: 0;
-    margin-bottom: 10px; /* Add margin between containers */
+
+  .admin-page {
+    margin-top: 10px;
   }
-  .container1 {
-    flex: 1;
-    min-height: auto; /* Adjust minimum height for containers */
-    margin-right: 0;
-    margin-bottom: 10px; /* Add margin between containers */
+
+  .login-section button {
+    width: 100%; /* Make the login button full-width on smaller screens */
   }
+
   footer {
     margin-top: 15px;
-    }
-    .social img {
-      width: 20px; /* Adjust social icon size */
-      height: 20px;
-      margin: 0 3px; /* Adjust margin between social icons */
-    }
+  }
+
+  .social img {
+    width: 20px; /* Adjust social icon size */
+    height: 20px;
+    margin: 0 3px; /* Adjust margin between social icons */
+  }
 }
+
+ 

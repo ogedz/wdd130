@@ -71,13 +71,16 @@ nav a:hover {
 .mt-5, a {
     color: gold;
 }
+.button, a {
+    color: #0056b3;
+}
 
 footer {
     background-color: #043112;
     text-align: center;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -116,10 +119,11 @@ footer {
     }
     footer {
         margin-top: 15px;
-        }
-        .social img {
-          width: 20px; /* Adjust social icon size */
-          height: 20px;
-          margin: 0 3px; /* Adjust margin between social icons */
-        }
+    }
+  
+    .social img {
+        width: 20px; /* Adjust social icon size */
+        height: 20px;
+        margin: 0 3px; /* Adjust margin between social icons */
+    }
 }
