@@ -69,7 +69,7 @@ nav a:hover {
 }
 
 .mt-5, a {
-    color: #007bff;
+    color: gold;
 }
 
 footer {
@@ -114,4 +114,12 @@ footer {
     .question {
         margin-bottom: 10px; 
     }
+    footer {
+        margin-top: 15px;
+        }
+        .social img {
+          width: 20px; /* Adjust social icon size */
+          height: 20px;
+          margin: 0 3px; /* Adjust margin between social icons */
+        }
 }
