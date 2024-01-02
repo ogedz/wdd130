@@ -162,45 +162,32 @@ footer {
   height: 30px;
   margin: 0 5px;
 }
-
-/* Responsive Styles for Smaller Screens */
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 14px; /* Adjust font size for smaller screens */
+/* Media Query for Responsive Design */
+@media screen and (max-width: 600px) {
+  #content {
+      padding: 10px;
   }
-
-  header {
-    padding: 5px; /* Adjust header padding */
-    flex-direction: column; /* Stack logo and navigation vertically */
-    text-align: center; 
+  
+  input,
+  textarea,
+  button {
+      width: 100%;
+      box-sizing: border-box;
   }
+}
 
-  #logo_link {
-    font-size: 18px; /* Adjust logo link font size */
-  }
+/* Additional Styles for Message Feedback */
+#feedback {
+  display: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
 
-  nav, footer {
-    flex-direction: column;
-  }
-
-  nav a {
-    display: block;
-    padding: 15px;
-    margin-bottom: 10px; /* Add margin between navigation links */
-  }
-
-  .advertisement img {
-    margin-top: 15px; /* Add space between advertisement image and text */
-  }
-
-  .admin-page {
-    margin-top: 10px;
-  }
-
-  .login-section button {
-    width: 100%; /* Make the login button full-width on smaller screens */
-  }
-
+.moveDown {
+  margin-top: 50px;
+}
   footer {
     margin-top: 15px;
   }
@@ -210,6 +197,6 @@ footer {
     height: 20px;
     margin: 0 3px; /* Adjust margin between social icons */
   }
-}
+
 
  

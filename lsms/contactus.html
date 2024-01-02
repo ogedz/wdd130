@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/contact.css">
 </head>
 <body>
-    <div class = "container1">
+    <div class="container1">
         <p><a href="index.html">Back To Home</a></p>
     </div>
     <div id="content"> 
@@ -17,20 +17,20 @@
             <form action="/my-handling-form-page" method="post">
                 <ul>
                     <li>
-                        <label for="name"> School's Name:</label>
-                        <input type="text" id="name" name="user_name" />
+                        <label for="schoolName">School's Name:</label>
+                        <input type="text" id="schoolName" name="school_name" />
                     </li>
                     <li>
-                        <label for="name">School Unique Id:</label>
-                        <input type="text" id="name" name="user_name" />
+                        <label for="uniqueId">School Unique Id:</label>
+                        <input type="text" id="uniqueId" name="unique_id" />
                     </li>
                     <li>
-                        <label for="mail">E-mail:</label>
-                        <input type="email" id="mail" name="user_mail" />
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="user_mail" />
                     </li>
                     <li>
-                        <label for="msg">Message:</label>
-                        <textarea id="msg" name="user_message"></textarea>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="user_message"></textarea>
                     </li>
                     <li class="button">
                         <button type="submit">Send your message</button>
@@ -40,34 +40,27 @@
         </div>
     </div>
     <footer>
-        <p>© 2023 Lifox School Management System  | Ogedengbe  | All rights reserved.</p>
+        <p>© 2023 Lifox School Management System | Ogedengbe | All rights reserved.</p>
         <div class="social">
-            <a href="https://facebook.com" target="blank">
+            <a href="https://facebook.com" target="_blank">
                 <img src="images/fb.jpg" alt="fb icon">
             </a>
-            <a href="https://twitter.com" target="blank">
+            <a href="https://twitter.com" target="_blank">
                 <img src="images/twitter.png" alt="twitter icon">
             </a>
-            <a href="https://instagram.com" target="blank">
+            <a href="https://instagram.com" target="_blank">
                 <img src="images/instagram.png" alt="instagram icon">
             </a>
         </div>
     </footer>
     <script>
-         // get the feedback div element so we can do something with it.
         const feedbackElement = document.getElementById('feedback');
-        // get the form so we can read what was entered in it.
         const formElement = document.forms[0];
-        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
         formElement.addEventListener('submit', function(e) {
-        // stop the form from doing the default action.
-        e.preventDefault();
-        // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
-        feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
-        // make the feedback element visible.
-        feedbackElement.style.display = "block";
-        // add a class to move everything down so our message doesn't cover it.
-        document.body.classList.toggle('moveDown');
+            e.preventDefault();
+            feedbackElement.innerHTML = 'Hello ' + formElement.school_name.value + '! Thank you for your message. We will get back to you as soon as possible!';
+            feedbackElement.style.display = "block";
+            document.body.classList.toggle('moveDown');
         });
     </script>
 </body>
