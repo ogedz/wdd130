@@ -165,6 +165,28 @@ nav a:hover {
 .available-tools p {
     text-align: center;
 }
+/* Training and Security */
+.training-security {
+    margin-top: 30px;
+}
+
+.training-security h2 {
+    text-align: center;
+}
+
+.training-security img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.training-security h3 {
+    text-align: center;
+}
+
+.training-security p{
+    text-align: center;
+}
 
 /* Testimonials Section Styles */
 .testimonials {
