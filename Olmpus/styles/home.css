@@ -1,0 +1,203 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 70px; 
+  margin-right: 10px; 
+}
+
+nav {
+  position: relative;
+  top: 0;
+  justify-content: right;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #007BFF;
+}
+
+/* Add the following styles */
+.slider {
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+.static-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; /* Set the text color */
+  z-index: 2; /* Ensure text is on top of images */
+}
+
+.static-content h1,
+.static-content p,
+.static-content a {
+  margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Specific styles for each section */
+#home {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #3498db; /* Blue color */
+  color: #fff;
+}
+
+#features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 80px 0;
+  background-color: #2ecc71; /* Green color */
+  color: #fff;
+}
+
+#features img {
+  width: 100%;
+  height: auto;
+}
+
+#features h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#features p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#why-choose,
+#how-it-works,
+#pricing,
+#about,
+#support,
+#contact {
+  text-align: center;
+  padding: 80px 0;
+}
+
+#why-choose {
+  background-color: #e74c3c; /* Red color */
+  color: #fff;
+}
+
+#how-it-works {
+  background-color: #f39c12; /* Orange color */
+  color: #fff;
+}
+
+#pricing {
+  background-color: #9b59b6; /* Purple color */
+  color: #fff;
+}
+
+#about {
+  background-color: #34495e; /* Dark blue color */
+  color: #fff;
+}
+
+#support {
+  background-color: #e67e22; /* Dark orange color */
+  color: #fff;
+}
+
+#contact {
+  background-color: #95a5a6; /* Gray color */
+  color: #fff;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+section p {
+  margin-bottom: 20px;
+}
+
+/* Media query for screen width 768px */
+@media (max-width: 768px) {
+  .logo,
+  nav {
+    position: static;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav ul {
+    display: block;
+    text-align: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  #features {
+    flex-direction: column;
+  }
+}

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CBT Exam</title>
-    <link rel="stylesheet" href="styles/cbt.css">
+    <link rel="stylesheet" type="text/css" href="styles/cbt.css">
+    <script type="text/javascript" src="scripts/scripts.js" defer></script>
+    <script type="text/javascript" src="scripts/server.js" defer></script>
 </head>
-
 <body>
     <div class="container">
         <!-- Timer Display -->
@@ -30,7 +30,7 @@
                 <button type="submit" class="btn btn-primary">Login</button>
             </form>
         </section>
-        
+
         <!-- Subject and Class Selection - Hidden Initially -->
         <section id="selectionSection" class="mb-4" style="display: none;">
             <h2>Select Subject and Class</h2>
@@ -52,9 +52,9 @@
             <!-- Your exam questions and options will be inserted here -->
         </section>
     </div>
-    <div class = "button">
+    <div class="button">
         <div>
-            <button><a href="index.html">Go to Home</a></button> 
+            <button><a href="index.html">Go to Home</a></button>
         </div>
     </div>
     <footer class="mt-5">
@@ -63,140 +63,15 @@
         <p><a href="contactus.html">Contact Us</a></p>
         <div class="social">
             <a href="https://facebook.com" target="_blank">
-                <img src="images/fb.jpg" alt="fb icon">
+                <img src="images/fb.jpg" alt="Facebook icon">
             </a>
             <a href="https://twitter.com" target="_blank">
-                <img src="images/twitter.png" alt="twitter icon">
+                <img src="images/twitter.png" alt="Twitter icon">
             </a>
             <a href="https://instagram.com" target="_blank">
-                <img src="images/instagram.png" alt="instagram icon">
+                <img src="images/instagram.png" alt="Instagram icon">
             </a>
         </div>
     </footer>
-    <!-- JS Script -->
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    fetch('https://your-backend-endpoint.com/api/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ username, password })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.token) {
-            localStorage.setItem('studentToken', data.token);
-            document.getElementById('loginSection').style.display = 'none';
-            document.getElementById('selectionSection').style.display = 'block';
-            fetchSubjectsAndClasses(data.token);
-        } else {
-            alert('Login failed. Please try again.');
-        }
-    })
-    .catch(error => console.error('Login Error:', error));
-});
-
-function fetchSubjectsAndClasses(token) {
-    fetch('https://your-backend-endpoint.com/api/subjectsAndClasses', {
-        headers: {
-            'Authorization': 'Bearer ' + token
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Populate subjects and classes dropdowns
-        const subjectSelect = document.getElementById('subjectSelect');
-        const classSelect = document.getElementById('classSelect');
-        
-        data.subjects.forEach(subject => {
-            const option = document.createElement('option');
-            option.value = subject.id;
-            option.textContent = subject.name;
-            subjectSelect.appendChild(option);
-        });
-
-        data.classes.forEach(cls => {
-            const option = document.createElement('option');
-            option.value = cls.id;
-            option.textContent = cls.name;
-            classSelect.appendChild(option);
-        });
-    })
-    .catch(error => console.error('Fetching Subjects and Classes Error:', error));
-}
-
-// Fetch exam questions based on selected subject and class
-document.getElementById('subjectClassForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const subjectId = document.getElementById('subjectSelect').value;
-    const classId = document.getElementById('classSelect').value;
-    const token = localStorage.getItem('studentToken');
-
-    fetch(`https://your-backend-endpoint.com/api/questions?subjectId=${subjectId}&classId=${classId}`, {
-        headers: {
-            'Authorization': 'Bearer ' + token
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Populate exam section with fetched questions
-        // Hide selectionSection and display examSection
-        document.getElementById('selectionSection').style.display = 'none';
-        document.getElementById('examSection').style.display = 'block';
-        startTimer();
-    })
-    .catch(error => console.error('Fetching Exam Questions Error:', error));
-});
-
-// ... The rest of the timer and exam code ...
-let remainingTime = 10 * 60;  // 10 minutes in seconds
-const timeDisplay = document.getElementById('time');
-
-document.getElementById('cbtForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    gradeExam();
-});
-
-function startTimer() {
-    const timerInterval = setInterval(function() {
-        if (remainingTime <= 0) {
-            clearInterval(timerInterval);
-            gradeExam();
-            alert("Time's up!");
-        }
-        const minutes = Math.floor(remainingTime / 60);
-        const seconds = remainingTime % 60;
-        timeDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-        remainingTime--;
-    }, 1000);
-}
-
-function gradeExam() {
-    let score = 0;
-
-    // Sample grading for the first question
-    const q1Value = document.querySelector('input[name="q1"]:checked').value;
-    if (q1Value === 'c') {
-        score++;
-    }
-
-    // Continue with grading for other questions...
-
-    alert(`Your score is: ${score}`);
-}
-
-// Start the timer when the page loads
-startTimer();
-
- 
-    </script>
 </body>
-
 </html>
