@@ -63,31 +63,29 @@ a:hover {
   color: #007BFF;
 }
 
-/*
 #home {
-  position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .slider {
-  position: relative;
-  width: 100vw; 
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .slide {
+  flex: 0 0 100%;
+  box-sizing: border-box;
   position: relative;
-  width: 100%;
-  height: 100vh; 
-  overflow: hidden; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .slide img {
-  width: 50%;
-  height: 50%; 
-  object-fit: cover; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Use 'cover' to make the image cover the entire container */
 }
 
 .static-content {
@@ -96,172 +94,558 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff; 
-  z-index: 2; 
-  width: 70%; 
-}
-
-.static-content h1,
-.static-content p,
-.static-content a {
-  margin-bottom: 20px;
-}*/
-
-#home {
-  position: relative;
-  overflow: hidden;
-}
-
-.slider {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
-.slide {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.static-content {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
   color: #fff;
-  z-index: 2;
-  width: 80%; /* Adjust this value to control the width of the text content */
-  max-width: 600px; /* Set a maximum width to prevent the content from becoming too wide on larger screens */
+  width: 70%;
+  max-width: 600px;
 }
 
-.static-content h1,
-.static-content p,
-.static-content a {
-  margin-bottom: 20px;
+.static-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
 }
 
+.static-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
 
-
-
-/* Footer styles */
-footer {
-  background-color: #333;
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.2em;
+  background-color: #3498db;
   color: #fff;
-  padding: 20px;
-  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
 }
 
+.cta-button:hover {
+  background-color: #2980b9;
+}
+
+/* Key Features Section */
 #features {
+  background-color: #f8f8f8; /* Light gray background */
+  padding: 80px 0; /* Adjust the padding as needed */
+  text-align: center;
+}
+
+#features h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333; /* Set the color for the section title */
+}
+
+#features div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20px;
-  padding: 80px 0;
-  background-color: #2ecc71; /* Green color */
-  color: #fff;
+}
+
+#features div > div {
+  flex: 0 0 calc(33.33% - 40px); /* Adjust the width of each feature block, considering margin */
+  margin: 20px;
+  padding: 30px;
+  background-color: #fff; /* White background for feature blocks */
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle box shadow for depth */
+}
+
+#features div > div:hover {
+  background-color: #f2f2f2; /* Light gray background on hover */
 }
 
 #features img {
-  width: 100%;
-  height: auto;
+  width: 200px; /* Adjust the width of the feature icons */
+  margin-bottom: 20px;
 }
 
 #features h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #007BFF; /* Set the color for feature titles */
 }
 
 #features p {
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 1.2em;
+  color: #555; /* Set the color for feature descriptions */
+  margin-bottom: 20px;
 }
 
-#why-choose,
-#how-it-works,
-#pricing,
-#about,
-#support,
-#contact {
-  text-align: center;
-  padding: 80px 0;
+#features .cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  background-color: #007BFF; /* Blue color for the call-to-action button */
+  color: #fff; /* White text color for the button */
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
 }
 
+#features .cta-button:hover {
+  background-color: #0056b3; /* Slightly darker blue on hover */
+}
+
+
+/* Why Choose Olympus Section */
 #why-choose {
   background-color: #e74c3c; /* Red color */
   color: #fff;
+  padding: 80px 0; /* Adjust the padding as needed */
+  text-align: center;
 }
 
+#why-choose h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+#why-choose ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#why-choose li {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+#why-choose div {
+  margin-top: 40px;
+}
+
+#why-choose div h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #007BFF; /* Set the color for section titles */
+}
+
+#why-choose div p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* How It Works Section */
 #how-it-works {
-  background-color: #f39c12; /* Orange color */
-  color: #fff;
+  background-color: #f8f8f8; /* Set a background color for the section */
+  padding: 60px 0; /* Adjust the padding as needed */
+  text-align: center;
 }
 
-#pricing {
-  background-color: #9b59b6; /* Purple color */
-  color: #fff;
+#how-it-works h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333; /* Set the color for the section title */
 }
+
+#how-it-works div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#how-it-works h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #007BFF; /* Set the color for step titles */
+}
+
+#how-it-works p {
+  font-size: 1.2em;
+  color: #555; /* Set the color for step descriptions */
+}
+
+#how-it-works .cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  background-color: #007BFF; /* Set the color for the call-to-action button */
+  color: #fff; /* Set the text color for the button */
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#how-it-works .cta-button:hover {
+  background-color: #0056b3; /* Set the hover color for the button */
+}
+
+
+/* How It Works Section */
+#how-it-works {
+  background-color: #f8f8f8; /* Set a background color for the section */
+  padding: 60px 0; /* Adjust the padding as needed */
+  text-align: center;
+}
+
+#how-it-works h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333; /* Set the color for the section title */
+}
+
+#how-it-works div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#how-it-works h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #007BFF; /* Set the color for step titles */
+}
+
+#how-it-works p {
+  font-size: 1.2em;
+  color: #555; /* Set the color for step descriptions */
+}
+
+#how-it-works .cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  background-color: #007BFF; /* Set the color for the call-to-action button */
+  color: #fff; /* Set the text color for the button */
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#how-it-works .cta-button:hover {
+  background-color: #0056b3; /* Set the hover color for the button */
+}
+
+/* How It Works Section */
+#how-it-works {
+  background-color: #f8f8f8; /* Set a background color for the section */
+  padding: 60px 0; /* Adjust the padding as needed */
+  text-align: center;
+}
+
+#how-it-works h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333; /* Set the color for the section title */
+}
+
+#how-it-works div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#how-it-works h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #007BFF; /* Set the color for step titles */
+}
+
+#how-it-works p {
+  font-size: 1.2em;
+  color: #555; /* Set the color for step descriptions */
+}
+
+#how-it-works .cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  background-color: #007BFF; /* Set the color for the call-to-action button */
+  color: #fff; /* Set the text color for the button */
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#how-it-works .cta-button:hover {
+  background-color: #0056b3; /* Set the hover color for the button */
+}
+
+/* Pricing Section */
+#pricing {
+  background-color: #3498db; /* Blue color */
+  color: #fff;
+  padding: 80px 0; /* Adjust the padding as needed */
+  text-align: center;
+}
+
+#pricing h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+#pricing p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+#pricing div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allow pricing plans to wrap on smaller screens */
+}
+
+#pricing div > div {
+  flex: 0 0 calc(33.33% - 40px); /* Adjust the width of each plan, considering margin */
+  margin: 20px;
+  padding: 30px;
+  background-color: #2c3e50; /* Darker blue for plan background */
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#pricing div > div:hover {
+  background-color: #34495e; /* Slightly darker blue on hover */
+}
+
+#pricing h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+#pricing p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #ecf0f1; /* Light gray text color for plan details */
+}
+
+#pricing ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#pricing li {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #bdc3c7; /* Lighter gray text color for plan features */
+}
+
+#pricing .cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  background-color: #e74c3c; /* Red color for the call-to-action button */
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#pricing .cta-button:hover {
+  background-color: #c0392b; /* Slightly darker red on hover */
+}
+
 
 #about {
   background-color: #34495e; /* Dark blue color */
   color: #fff;
+  padding: 80px 0; /* Adjust the padding as needed */
+  text-align: center;
 }
 
+#about h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+#about p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#about h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #007BFF; /* Set the color for section titles */
+}
+
+#about div {
+  margin-top: 40px;
+}
+
+#about img {
+  width: 100%;
+  max-width: 200px; /* Adjust the maximum width of the team member images */
+  border-radius: 50%; /* Make team member images circular */
+  margin-bottom: 15px;
+}
+
+#about p strong {
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#about div > div {
+  margin-bottom: 40px;
+}
+
+
+/* Customer Support Section */
 #support {
   background-color: #e67e22; /* Dark orange color */
   color: #fff;
+  padding: 80px 0; /* Adjust the padding as needed */
+  text-align: center;
 }
 
-#contact {
-  background-color: #95a5a6; /* Gray color */
+#support h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+#support p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+#support h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #fff; /* Set the color for section titles */
+}
+
+#support ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#support li {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+#support a {
+  text-decoration: none;
   color: #fff;
+  font-weight: bold;
 }
 
-section h2 {
+#support a:hover {
+  color: #ffb74d; /* Set the hover color for links */
+}
+
+#support .cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  background-color: #e74c3c; /* Red color */
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#support .cta-button:hover {
+  background-color: #c0392b; /* Set the hover color for the button */
+}
+
+/* Footer Section */
+footer {
+  background-color: #34495e; /* Dark blue color */
+  color: #fff;
+  padding: 60px 0; /* Adjust the padding as needed */
+  text-align: center;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer div h3 {
+  font-size: 1.8em;
   margin-bottom: 20px;
+  color: #007BFF; /* Set the color for section titles */
 }
 
-section p {
-  margin-bottom: 20px;
+footer div p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
-.cta-button {
-  padding: 10px;
-  background-color: green;
+footer div a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Media query for screen width 768px */
-@media (max-width: 768px) {
-  .logo,
+footer div a:hover {
+  color: #3498db; /* Set the hover color for links */
+}
+
+
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+
+  .logo {
+    position: static;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
   nav {
     position: static;
     text-align: center;
-    width: 100%;
+    margin-top: 15px;
   }
 
   nav ul {
     display: block;
-    text-align: center;
-    padding: 0;
+    margin: 0;
   }
 
   nav ul li {
     display: block;
-    margin: 10px 0;
+    margin: 0;
   }
 
-  #features {
+  .slider {
+    height: auto;
+  }
+
+  .static-content {
+    width: 90%;
+  }
+
+
+
+  #features div > div,
+  #pricing div > div,
+  #about div > div,
+  #how-it-works div > div,
+  #why-choose div,
+  #support div {
+    flex: 0 0 100%;
+    margin: 15px 0;
+  }
+
+  #features img,
+  #pricing img,
+  #about img,
+  #how-it-works img,
+  #why-choose img,
+  #support img {
+    width: 60px;
+    margin-bottom: 15px;
+  }
+
+  footer div {
     flex-direction: column;
+    align-items: center;
+  }
+
+  footer div h3 {
+    margin-top: 20px;
+  }
+
+  footer div p {
+    margin-bottom: 20px;
   }
 }
+
+
