@@ -2,6 +2,7 @@
 /* ogedengbe */
 body {
     font-family: 'Roboto';
+    font-size: 1.3em;
     background-color: rgb(32, 24, 105); 
     color: gold; /* Set default text color */
     box-sizing: border-box;

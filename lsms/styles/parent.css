@@ -1,6 +1,7 @@
 /* General styles */
 body {
     font-family: 'Arial', sans-serif;
+    font-size: 1.3em;
     background-color: #eef2f7;
     box-sizing: border-box;
     padding: 10px;
